@@ -1,5 +1,5 @@
 # Registo de sessões
-n[English](session-log.en.md)
+[English](session-log.en.md)
 
 O enunciado exige descrever as técnicas usadas, a evidência, o contexto e o tempo dedicado por analista e tarefa.
 

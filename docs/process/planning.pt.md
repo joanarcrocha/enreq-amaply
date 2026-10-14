@@ -1,5 +1,5 @@
 # Planeamento
-n[English](planning.en.md)
+[English](planning.en.md)
 
 ## Marcos
 
