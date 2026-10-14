@@ -1,4 +1,4 @@
-# FAIR-AMAP: Especificação de Requisitos
+# amaply: Especificação de Requisitos
 
 [🇬🇧 English](README.md) | 🇵🇹 Português
 
@@ -7,6 +7,8 @@ Trabalho prático n.º 1 da unidade curricular de Engenharia de Requisitos (ENGR
 **Data limite de entrega: 15 de novembro de 2026 (Moodle).**
 
 ## Contexto
+
+**amaply** é o nome da aplicação especificada neste projeto (designada FAIR-AMAP no enunciado).
 
 A FAIR Software Solutions é uma startup que desenvolve soluções de software para facilitar a distribuição e venda de produtos alimentares, no contexto da Agenda 2030 para o Desenvolvimento Sustentável da ONU (17 Objetivos de Desenvolvimento Sustentável, https://ods.pt/ods/).
 
@@ -78,10 +80,11 @@ Outras partes referidas no enunciado que interagem com o sistema ou o projeto, m
 
 | Nome | Número | Papel |
 |---|---|---|
-| _por preencher_ | | |
+| Joana Rita Rocha | 1211652 | Analista de negócio |
 
 ## Convenções
 
+- **Regra de documentação (sem exceções): toda a informação deve ser sempre devidamente documentada e justificada.** Cada requisito, decisão, pressuposto, estimativa e prioridade deve indicar a sua fonte (sessão, documento ou pesquisa) e o raciocínio que o sustenta.
 - Uma entrada por sessão de levantamento em `docs/process/session-log`, com data, duração, participantes e técnica usada.
 - Commits curtos e descritivos, indicando a área (por exemplo, `elicitation: notes from session 2`).
 - Estado do trabalho e responsáveis registados em `docs/process/planning`.

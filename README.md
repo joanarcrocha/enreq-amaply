@@ -1,4 +1,4 @@
-# FAIR-AMAP: Requirements Specification
+# amaply: Requirements Specification
 
 🇬🇧 English | [🇵🇹 Português](README.pt.md)
 
@@ -7,6 +7,8 @@ Practical Assignment no. 1 of the Requirements Engineering course (ENGREQ), Mast
 **Submission deadline: 15 November 2026 (Moodle).**
 
 ## Context
+
+**amaply** is the name of the application specified in this project (referred to as FAIR-AMAP in the assignment).
 
 FAIR Software Solutions is a startup developing software solutions that facilitate the distribution and sale of food products, within the scope of the UN 2030 Agenda for Sustainable Development (17 Sustainable Development Goals, https://ods.pt/ods/).
 
@@ -78,10 +80,11 @@ Other parties mentioned in the assignment that interact with the system or the p
 
 | Name | Student no. | Role |
 |---|---|---|
-| _to be filled_ | | |
+| Joana Rita Rocha | 1211652 | Business analyst |
 
 ## Conventions
 
+- **Documentation rule (no exceptions): all information must always be properly documented and justified.** Every requirement, decision, assumption, estimate and priority must state its source (session, document or research) and the reasoning behind it.
 - One entry per elicitation session in `docs/process/session-log`, with date, duration, participants and technique used.
 - Short, descriptive commits that state the area (for example, `elicitation: notes from session 2`).
 - Work status and owners tracked in `docs/process/planning`.
