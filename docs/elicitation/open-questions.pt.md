@@ -1,4 +1,5 @@
 # Questões em aberto
+n[English](open-questions.en.md)
 
 ## Perguntas do enunciado ainda por responder
 

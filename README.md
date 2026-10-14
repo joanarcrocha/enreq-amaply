@@ -1,80 +1,88 @@
-# FAIR-AMAP: Especificação de Requisitos
+# FAIR-AMAP: Requirements Specification
 
-Trabalho prático n.º 1 da unidade curricular de Engenharia de Requisitos (ENGREQ), Mestrado em Engenharia Informática, ISEP, edição 2026/2027.
+🇬🇧 English | [🇵🇹 Português](README.pt.md)
 
-## Contexto
+Practical Assignment no. 1 of the Requirements Engineering course (ENGREQ), Master's in Informatics Engineering, ISEP, 2026/2027.
 
-A FAIR Software Solutions é uma startup que desenvolve soluções de software para facilitar a distribuição e venda de produtos alimentares, no contexto da Agenda 2030 para o Desenvolvimento Sustentável da ONU (17 Objetivos de Desenvolvimento Sustentável, https://ods.pt/ods/).
+**Submission deadline: 15 November 2026 (Moodle).**
 
-A empresa identificou uma oportunidade de negócio no setor das AMAP/CSA e procura uma equipa que especifique os requisitos funcionais e não funcionais da solução, cobrindo todos os seus processos.
+## Context
 
-- **AMAP**: Associação para a Manutenção da Agricultura de Proximidade.
+FAIR Software Solutions is a startup developing software solutions that facilitate the distribution and sale of food products, within the scope of the UN 2030 Agenda for Sustainable Development (17 Sustainable Development Goals, https://ods.pt/ods/).
+
+The company has identified a business opportunity in the AMAP/CSA field and is looking for a team to specify the functional and non-functional requirements of the solution, covering all of its processes.
+
+- **AMAP**: Association for the Maintenance of Local Farming.
 - **CSA**: Community Supported Agriculture.
 
-Uma AMAP/CSA é formada por um grupo de consumidores (co-produtores) que apoia ativamente e diretamente um ou mais agricultores e produtores, garantindo a distribuição da sua produção.
+An AMAP/CSA is formed by a group of consumers (co-producers) who actively and directly support one or more farmers and producers, ensuring the distribution of their produce.
 
-## Objetivo do trabalho
+## Goal
 
-Produzir uma Especificação de Requisitos de Software (SRS) completa, incluindo:
+Produce a complete Software Requirements Specification (SRS) including:
 
-- descrição geral do sistema;
-- funcionalidades;
-- interfaces externas;
-- requisitos não funcionais;
-- prioridades;
-- estimativa, em horas, do desenvolvimento de cada funcionalidade;
-- descrição do processo: método, técnicas aplicadas e respetivas evidências, contexto e tempo dedicado por analista e por tarefa.
+- general description of the system;
+- system functionalities;
+- external interfaces;
+- non-functional requirements;
+- priorities;
+- estimate, in hours, for the development of each functionality;
+- description of the process: method, techniques applied and supporting evidence, context, and time allocated to each analyst and task.
 
-O enunciado completo está em [docs/enunciado](docs/enunciado/engreq_tp1_2026_27_v2_EN.pdf). A entrega é feita no Moodle.
+The full assignment is in [docs/assignment](docs/assignment/engreq_tp1_2026_27_v2_EN.pdf).
 
-## Estrutura do repositório
+## Repository structure
 
 ```
 .
-├── README.md
+├── README.md / README.pt.md
 ├── docs/
-│   ├── enunciado/     Enunciado do trabalho
-│   ├── elicitacao/    Notas das sessões e síntese dos requisitos recolhidos
-│   ├── processo/      Planeamento, atas das reuniões e registo de tarefas
-│   └── srs/           Documento SRS (versão em construção e versão final)
-└── artefactos/        Modelos, diagramas, protótipos e outros artefactos de apoio
+│   ├── assignment/    Assignment statement
+│   ├── elicitation/   Session notes and synthesis of gathered requirements
+│   ├── process/       Planning, session log and task tracking
+│   └── srs/           SRS document (draft and final versions)
+└── artefacts/         Models, diagrams, prototypes and other supporting artefacts
 ```
 
-| Pasta | Conteúdo | Ficheiros iniciais |
+| Folder | Content | Initial files |
 |---|---|---|
-| `docs/elicitacao` | Tudo o que vem dos stakeholders e da pesquisa documental | [notas-sessoes.md](docs/elicitacao/notas-sessoes.md), [questoes-em-aberto.md](docs/elicitacao/questoes-em-aberto.md) |
-| `docs/processo` | Evidência do método seguido, exigida pelo enunciado | [planeamento.md](docs/processo/planeamento.md), [registo-sessoes.md](docs/processo/registo-sessoes.md) |
-| `docs/srs` | Especificação final | por criar |
-| `artefactos` | Diagramas, modelos de processos, protótipos | por criar |
+| `docs/elicitation` | Everything coming from stakeholders and documentary research | [session-notes.en.md](docs/elicitation/session-notes.en.md), [open-questions.en.md](docs/elicitation/open-questions.en.md) |
+| `docs/process` | Evidence of the method followed, required by the assignment | [planning.en.md](docs/process/planning.en.md), [session-log.en.md](docs/process/session-log.en.md) |
+| `docs/srs` | Final specification | to be created |
+| `artefacts` | Diagrams, process models, prototypes | to be created |
 
-## Abordagem
+## Language policy
 
-O trabalho segue a metodologia de levantamento de requisitos lecionada na unidade curricular, combinando várias técnicas:
+All repository content and documentation is kept in English and Portuguese. Each document exists in two files with the same name: `name.en.md` and `name.pt.md`. Any change to one must be mirrored in the other. The README is the exception: `README.md` is English and `README.pt.md` is Portuguese.
 
-- sessões com stakeholders reais (aulas T) e sessões simuladas com os docentes (aulas PL);
-- análise documental e pesquisa de fontes relevantes;
-- registo contínuo do progresso neste repositório (planeamento, reuniões, tarefas, artefactos).
+## Approach
 
-Lema orientador do levantamento: **Pessoas, Documentos, Processos**.
+The work follows the requirements elicitation methodology taught in the course, combining several techniques:
 
-## Stakeholders identificados
+- sessions with real stakeholders (T classes) and simulated sessions with the lecturers (PL classes);
+- documentary analysis and research into relevant sources;
+- continuous recording of progress in this repository (planning, meetings, tasks, artefacts).
 
-- Direção da FAIR Software Solutions
-- Co-produtores/consumidores
-- Distribuidores
-- Produtores/agricultores
-- Coordenação de voluntários
-- Engenharia de sistemas, segurança e requisitos não funcionais
-- Coordenador da AMAP
+Guiding motto for elicitation: **People, Documents, Processes**.
 
-## Equipa
+## Identified stakeholders
 
-| Nome | Número | Papel |
+- Director of FAIR Software Solutions
+- Co-producers/consumers
+- Distributors
+- Producers/farmers
+- Volunteer coordination
+- System engineering, security and non-functional requirements
+- AMAP coordinator
+
+## Team
+
+| Name | Student no. | Role |
 |---|---|---|
-| _por preencher_ | | |
+| _to be filled_ | | |
 
-## Convenções
+## Conventions
 
-- Um ficheiro por sessão de levantamento, registado em `docs/processo/registo-sessoes.md` com data, duração, participantes e técnica usada.
-- Commits curtos e descritivos, indicando a área (por exemplo, `elicitacao: notas da sessão 2`).
-- Estado do trabalho e responsáveis registados em `docs/processo/planeamento.md`.
+- One entry per elicitation session in `docs/process/session-log`, with date, duration, participants and technique used.
+- Short, descriptive commits that state the area (for example, `elicitation: notes from session 2`).
+- Work status and owners tracked in `docs/process/planning`.

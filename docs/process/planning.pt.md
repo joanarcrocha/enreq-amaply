@@ -1,4 +1,5 @@
 # Planeamento
+n[English](planning.en.md)
 
 ## Marcos
 
@@ -7,7 +8,7 @@
 | Apresentação do projeto (direção da FAIR) | por preencher | por preencher |
 | Sessões de levantamento | por preencher | em curso |
 | Primeira versão do SRS | por preencher | por iniciar |
-| Entrega no Moodle | por preencher | por iniciar |
+| Entrega no Moodle | 15 de novembro de 2026 | por iniciar |
 | Apresentação final | por preencher | por iniciar |
 
 ## Tarefas

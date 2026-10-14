@@ -1,4 +1,5 @@
 # Notas das sessões de levantamento
+n[English](session-notes.en.md)
 
 Notas em bruto organizadas por pergunta. Lembrete: **Pessoas, Documentos, Processos**.
 
