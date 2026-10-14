@@ -13,7 +13,6 @@
 
 ## Questions that failed in the sessions
 
-- Who are the stakeholders?
 - Who pays?
 - What is the process from origin?
 - Which documents are involved?

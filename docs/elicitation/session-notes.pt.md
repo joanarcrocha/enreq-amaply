@@ -3,6 +3,10 @@
 
 Notas em bruto organizadas por pergunta. Lembrete: **Pessoas, Documentos, Processos**.
 
+## Stakeholders
+
+Os stakeholders são os produtores e os co-produtores (clientes).
+
 ## Pergunta 1: O que deve o software resolver?
 
 - Comunicação entre produtores e consumidores.

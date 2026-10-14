@@ -65,15 +65,14 @@ O trabalho segue a metodologia de levantamento de requisitos lecionada na unidad
 
 Lema orientador do levantamento: **Pessoas, Documentos, Processos**.
 
-## Stakeholders identificados
+## Stakeholders
 
-- Direção da FAIR Software Solutions
-- Co-produtores/consumidores
-- Distribuidores
-- Produtores/agricultores
-- Coordenação de voluntários
-- Engenharia de sistemas, segurança e requisitos não funcionais
-- Coordenador da AMAP
+Os stakeholders do sistema são:
+
+- **Produtores/agricultores**
+- **Co-produtores** (os clientes/consumidores)
+
+Outras partes referidas no enunciado que interagem com o sistema ou o projeto, mas que não são os stakeholders principais: direção da FAIR Software Solutions, distribuidores, coordenação de voluntários, engenharia de sistemas/segurança/requisitos não funcionais e coordenador da AMAP.
 
 ## Equipa
 

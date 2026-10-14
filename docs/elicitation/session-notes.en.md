@@ -4,6 +4,10 @@
 
 Raw notes organised by question. Reminder: **People, Documents, Processes**.
 
+## Stakeholders
+
+The stakeholders are the producers and the co-producers (clients).
+
 ## Question 1: What should the software address?
 
 - Communication between producers and consumers.

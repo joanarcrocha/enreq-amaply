@@ -12,7 +12,6 @@
 
 ## Perguntas que falharam nas sessões
 
-- Quem são os interessados?
 - Quem paga?
 - Qual é o processo desde a origem?
 - Quais são os documentos envolvidos?

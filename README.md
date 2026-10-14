@@ -65,15 +65,14 @@ The work follows the requirements elicitation methodology taught in the course, 
 
 Guiding motto for elicitation: **People, Documents, Processes**.
 
-## Identified stakeholders
+## Stakeholders
 
-- Director of FAIR Software Solutions
-- Co-producers/consumers
-- Distributors
-- Producers/farmers
-- Volunteer coordination
-- System engineering, security and non-functional requirements
-- AMAP coordinator
+The stakeholders of the system are:
+
+- **Producers/farmers**
+- **Co-producers** (the clients/consumers)
+
+Other parties mentioned in the assignment that interact with the system or the project, but are not the main stakeholders: director of FAIR Software Solutions, distributors, volunteer coordination, system engineering/security/non-functional requirements, and the AMAP coordinator.
 
 ## Team
 
