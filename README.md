@@ -81,6 +81,7 @@ Other parties mentioned in the assignment that interact with the system or the p
 | Name | Student no. | Role |
 |---|---|---|
 | Joana Rita Rocha | 1211652 | Business analyst |
+| Bendik Halstensen | 1260122 | Business analyst |
 
 ## Conventions
 
