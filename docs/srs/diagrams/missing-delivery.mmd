@@ -1,0 +1,15 @@
+flowchart TD
+    A["Identify the missing<br/>delivery or item"] --> B["Link it to the affected<br/>subscription and delivery"]
+    B --> C{"Producer chooses<br/>the response"}
+    C --> D["Replacement<br/>product"]
+    C --> E["Refund"]
+    C --> F["Platform<br/>credit"]
+    D --> G["Record the chosen response<br/>and its progress"]
+    E --> G
+    F --> G
+    G --> H["Record completion<br/>when confirmed"]
+
+    classDef action fill:#f8ecd6,stroke:#b88742,color:#202b33,stroke-width:1.5px;
+    classDef decision fill:#e7f1ed,stroke:#49806c,color:#202b33,stroke-width:1.5px;
+    class A,B,D,E,F,G,H action;
+    class C decision;
