@@ -107,7 +107,6 @@ S1-Qn & Elicitation session 1 (interview with stakeholders), question n (Q1 to Q
 S2-Pn & Elicitation session 2 (structured interview), producer question n & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 S2-Cn & Elicitation session 2, co-producer question n & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 S2-F & Elicitation session 2, additional findings & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
-OQ & Open question or point still to confirm with stakeholders & \url{docs/elicitation/open-questions.en.md} \\ \hline
 IN-P & Supplementary interview notes, producer (Biogoods AMAP) & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
 IN-C & Supplementary interview notes, co-producer & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
 TA-1 & Lecturer-provided material: presentation of the Biogoods AMAP producer (September 2026) & File \url{docs/AMAP_ISEP_SET2026.pdf} \\ \hline
@@ -162,7 +161,7 @@ The product relates to SDG 2 (targets 2.3 and 2.4), SDG 11 (target 11.a) and SDG
 
 \begin{itemize}
   \item [A] Santos, J. and Silva, B. (2026). ENGREQ Practical Assignment No. 1, FAIR-AMAP, version 1.0. ISEP, Master's in Informatics Engineering.
-  \item [R1] Project repository: \url{https://github.com/joanarcrocha/enreq-amaply} (elicitation notes, open questions, planning and session log).
+  \item [R1] Project repository: \url{https://github.com/joanarcrocha/enreq-amaply} (elicitation notes, planning and session log).
   \item [R2] Wiegers, K. and Beatty, J. (2013). Software Requirements, 3rd edition. Microsoft Press.
   \item [R3] ISO/IEC/IEEE 29148:2018. Systems and software engineering, Life cycle processes, Requirements engineering.
   \item [R4] AMAP movement in Portugal: \url{https://amap.movingcause.org/} (referenced in the assignment).
@@ -239,18 +238,18 @@ The AMAP coordinator is not necessarily a separate person: one account can hold 
 
 \subsection{Assumptions and dependencies}
 
-The following assumptions are not confirmed facts. If any of them is wrong, the related requirements must be reviewed. Most come from the open questions recorded in the repository.
+The following assumptions are not confirmed facts. If any of them is wrong, the related requirements must be reviewed. Most come from points the stakeholders did not settle.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.085\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.521\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.182\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.212\linewidth-2\tabcolsep\relax}}
 \caption{Assumptions and dependencies}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Assumption or dependency}} & \textcolor{white}{\textbf{Affected requirements}} & \textcolor{white}{\textbf{Source}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Assumption or dependency}} & \textcolor{white}{\textbf{Affected requirements}} & \textcolor{white}{\textbf{Source}} \\ \endhead
-AS-01 & Next season's production is planned by the producer and agreed with the co-producers. & FR-21 & S1-Q2, OQ \\ \hline
+AS-01 & Next season's production is planned by the producer and agreed with the co-producers. & FR-21 & S1-Q2 \\ \hline
 AS-02 & Waiting lists are ordered by request date unless the AMAP configures another rule (no priority rule was given). & FR-13 & S1-Q5, S2-P4, S2-C4 \\ \hline
 AS-03 & EUR is the only currency needed at launch (no currency was named; first users are in Portugal). & LOC-10 & S2-P6, S2-C6 \\ \hline
 AS-04 & Email and in-app notifications are sufficient channels at launch (no channel was specified). & FR-54 & S2-P5 \\ \hline
-AS-05 & First-year volume: up to 500 AMAPs, 50 000 registered users and 1 000 simultaneous users. Order of magnitude only, chosen because Portugal has a few dozen CSAs but the product is international. & NFR-P-02 & S1-Q6, OQ \\ \hline
+AS-05 & First-year volume: up to 500 AMAPs, 50 000 registered users and 1 000 simultaneous users. Order of magnitude only, chosen because Portugal has a few dozen CSAs but the product is international. & NFR-P-02 & S1-Q6 \\ \hline
 AS-06 & Renewal of subscriptions happens per season, by invitation before the season ends (no renewal procedure was given). & FR-27 & S2-P3, S2-C3 \\ \hline
 AS-07 & A payment provider offering MB Way, SEPA transfers and split payments to several beneficiaries is available in Portugal; support for recurring payments is still to be confirmed. & FR-40 to FR-44 & AN, MR \\ \hline
 AS-08 & Each AMAP has at least one person willing to act as coordinator. & Features 3.4 and 3.5 & S1-Q7, S2-P4 \\ \hline
@@ -663,7 +662,7 @@ FR-47 & The system shall charge a configurable minimum fee per transaction, with
 
 \subsubsection{Description}
 
-Who issues the invoice depends on the legal setup of the AMAP: sometimes the AMAP is a registered entity, other times payment goes directly to the farmer, who issues the invoice [S1-Q10]. Priority is Should because the session did not say who issues invoices in the platform flow [S2-P1] and the legal analysis is pending (OQ).
+Who issues the invoice depends on the legal setup of the AMAP: sometimes the AMAP is a registered entity, other times payment goes directly to the farmer, who issues the invoice [S1-Q10]. Priority is Should because the session did not say who issues invoices in the platform flow [S2-P1] and the legal analysis is pending.
 
 \textbf{Priority: Should.}
 
@@ -874,7 +873,7 @@ Credit record & Monetary amount and currency & Credit awarded for a missing deli
 Absence and alternative collection & Delivery-related arrangement & Advance notice that the co-producer cannot collect, with their choice of another person, an institution or other co-producers receiving the food. & S2-P5. \\ \hline
 Interface language & Language choice & Portuguese or English as the priority supported languages. Additional languages and exact variants remain to be agreed. & S2-C6. \\ \hline
 \end{longtable}}
-Multiple roles per account and coordinator-led admissions follow FR-02 and FR-11. Remaining business decisions: waiting-list priority and membership exit; pause/cancellation dates and financial effects; joining, transfers and renewals; price calculation, billing schedules, payment recipients, reconciliation, credit use and invoice responsibility; seasonal balance and quality complaints. Required personal data, field limits, access rights, status values and retention periods also need agreement. [OQ; S2; analysis questions]
+Multiple roles per account and coordinator-led admissions follow FR-02 and FR-11. Remaining business decisions: waiting-list priority and membership exit; pause/cancellation dates and financial effects; joining, transfers and renewals; price calculation, billing schedules, payment recipients, reconciliation, credit use and invoice responsibility; seasonal balance and quality complaints. Required personal data, field limits, access rights, status values and retention periods also need agreement. [S2; analysis questions]
 
 
 \subsection{Reports}
@@ -1080,11 +1079,11 @@ Layouts, accessibility targets, screen sizes, browser support and the complete p
 
 \subsection{Software interfaces}
 
-The following service interfaces are candidates for supporting the agreed workflows. Specific providers and versions remain undecided; payment and invoicing integrations follow CO-2 and FR-49, while the other external services remain candidates. [OQ; S2-P1, S2-P5, S2-C3 to S2-C4, S2-F]
+The following service interfaces are candidates for supporting the agreed workflows. Specific providers and versions remain undecided; payment and invoicing integrations follow CO-2 and FR-49, while the other external services remain candidates. [S2-P1, S2-P5, S2-C3 to S2-C4, S2-F]
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.61\linewidth]{figures/external-interfaces.png}
-\caption{Interface overview. Solid lines show user interaction; dashed lines show candidate integrations. No providers are selected. [OQ; S2-P1, S2-P5, S2-C3 to S2-C4, S2-F; proposed interface layout.]}\label{fig:external-interfaces}
+\caption{Interface overview. Solid lines show user interaction; dashed lines show candidate integrations. No providers are selected. [S2-P1, S2-P5, S2-C3 to S2-C4, S2-F; proposed interface layout.]}\label{fig:external-interfaces}
 \end{figure}
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.183\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.409\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.409\linewidth-2\tabcolsep\relax}}
@@ -1094,8 +1093,8 @@ The following service interfaces are candidates for supporting the agreed workfl
 Notification service & Send the recipient address for the selected channel, message content and delivery or community reference; receive acceptance or failure information. & Notify co-producers about collection and remind producers before delivery. One day before delivery is an example; timing and channels remain to be agreed. [S1-Q4; S2-P5] \\ \hline
 Location or mapping service & Send the location entered or selected by the user; receive matching places, coordinates or distances as needed. & Support geographic AMAP discovery and several collection locations per AMAP. Provider and device-location access remain undecided. [S2-C4, S2-F] \\ \hline
 Payment service & Send a payment request with amount, currency, intended recipient and reference; receive its outcome. Exchanges for refunds, allocation or settlement must be defined if required by the selected payment arrangement. & Support AMAP-selected platform payments alongside external payments. Producers must be able to access funds before delivery. Combined payments are desired where feasible; recipient, fees, method list and reconciliation remain open. [S2-P1 to S2-P2, S2-C1] \\ \hline
-Invoicing service & Exchange the seller, customer and transaction details required by an agreed invoicing process, and receive the invoice reference or document. & Support the certified invoicing integration specified in FR-49. No provider has been selected; the issuer depends on the AMAP legal setup and remains to be confirmed. [S1-Q10; OQ] \\ \hline
-External authentication service & Exchange the information needed to establish a user session and identify the account, according to the selected sign-in method. & Support sign-in if an external identity provider is chosen. The provider, protocol and account-linking rules remain open. [OQ] \\ \hline
+Invoicing service & Exchange the seller, customer and transaction details required by an agreed invoicing process, and receive the invoice reference or document. & Support the certified invoicing integration specified in FR-49. No provider has been selected; the issuer depends on the AMAP legal setup and remains to be confirmed. [S1-Q10] \\ \hline
+External authentication service & Exchange the information needed to establish a user session and identify the account, according to the selected sign-in method. & Support sign-in if an external identity provider is chosen. The provider, protocol and account-linking rules remain open. \\ \hline
 Optional chat service & If an external chat product is selected, exchange sender and recipient identifiers, message content and any agreed delivery information. & In-platform chat is requested, but using an external service is not a requirement. Permissions, retention, provider and protocol remain open. [S2-C3] \\ \hline
 \end{longtable}}
 Each selected integration needs a provider/version, message fields and format, authentication method and failure behaviour. The table gives preliminary exchanges.
@@ -1156,7 +1155,7 @@ NFR-U-03 & Every main task shall be possible on a smartphone with a screen of 36
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement}} & \textcolor{white}{\textbf{Prio.}} & \textcolor{white}{\textbf{Source}} & \textcolor{white}{\textbf{Justification}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement}} & \textcolor{white}{\textbf{Prio.}} & \textcolor{white}{\textbf{Source}} & \textcolor{white}{\textbf{Justification}} \\ \endhead
 NFR-P-01 & 95\% of page loads and user actions shall respond in less than 2 seconds under nominal load. & Should & AN & Common target for interactive web applications; supports NFR-U-01. \\ \hline
-NFR-P-02 & The system shall support 1 000 simultaneous users and 50 000 registered users without degrading NFR-P-01 (provisional, AS-05). & Should & S1-Q6, OQ & Expected volume was asked but not answered; values to be confirmed. \\ \hline
+NFR-P-02 & The system shall support 1 000 simultaneous users and 50 000 registered users without degrading NFR-P-01 (provisional, AS-05). & Should & S1-Q6 & Expected volume was asked but not answered; values to be confirmed. \\ \hline
 NFR-P-03 & Event notifications (incident, calendar change, payment) shall be sent within 5 minutes of the event. & Should & AN, S1-Q4 & Co-producers must learn of changes before travelling to the collection point. \\ \hline
 \end{longtable}}
 
@@ -1248,7 +1247,7 @@ The work followed the requirements elicitation methodology taught in the course,
 \begin{itemize}
   \item \textbf{1. Preparation.} Analysis of the assignment, identification of stakeholders and preparation of questions. Evidence: README, \url{docs/assignment}.
   \item \textbf{2. Elicitation.} Sessions with stakeholders, complemented by documentary analysis. Each session was recorded in the repository (notes and session log).
-  \item \textbf{3. Analysis.} Unanswered and failed questions were consolidated in a list of open questions; answers were turned into requirements and assumptions.
+  \item \textbf{3. Analysis.} Unanswered and failed questions were consolidated; answers were turned into requirements and assumptions.
   \item \textbf{4. Specification.} Writing of this SRS, with traceability of each requirement to its source (Table 1) and explicit justification.
   \item \textbf{5. Validation (planned).} Review of the SRS with stakeholders to close the open questions and assumptions of section 2.5.
 \end{itemize}
@@ -1282,7 +1281,6 @@ Documentary analysis & Individual work & Analysis of the assignment statement an
 Interview (session 1) & Held during a T class, with a producer as a real stakeholder. Date not recorded. & Open interview with 10 questions on purpose, user types, monetisation, cycles, joining, target audience, failures, sustainability and invoicing. & \url{docs/elicitation/session-notes.en.md} \\ \hline
 Structured interview with questionnaire (session 2) & PL class, with the lecturer simulating the stakeholder roles. Date not recorded. & Separate question sets for producers (6) and co-producers (6) on payments, shortages, subscription changes, responsibilities, collection and internationalization. & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 Supplementary interview notes & Notes taken during T classes with real stakeholders, when all six students still worked as one group (see section 10.4). IN-C is the interview of a co-producer, dated 6 October 2026. IN-P records the presentation and question session of the Biogoods producer; the material is dated September 2026 (day not recorded). & Notes of interviews with a producer (Biogoods AMAP) and a co-producer, used by sections 4 to 6 as supplementary evidence (codes IN-P and IN-C). & Folder \url{docsoldgroup/notas-entrevistas} (earlier group archive) \\ \hline
-Open questions log & Continuous & Record of unanswered or failed questions and points to confirm, used to plan the next sessions and to define assumptions. & \url{docs/elicitation/open-questions.en.md} \\ \hline
 Modelling & Analysis & Context diagram, core domain model, workflow diagrams (pause/cancellation, missing delivery), interface overview, extended domain model, subscription state diagram, and the platform view, use case diagram and season and distribution domain model, used to check the consistency of the requirements. Mermaid sources are in \url{docs/srs/diagrams}. & Figures 1 to 10 \\ \hline
 Desk research and personas & Analysis & Review of AMAP/CSA practice in Portugal and Spain and of existing CSA software (open source and commercial); personas and process maps (season launch, weekly planning, distribution day, absences, crop losses) used for sections 1, 2, 3.1 and 5.5. & \url{docs/SRS_FAIR-AMAP.docx} (research draft); R9 to R11 \\ \hline
 Analysis of complementary documents & Team work & Lecturer-provided presentations of two producers (TA-1, TA-2), a press report on AMAP Porto (TA-3) and the real order form of AMAP Porto Baixa (TA-F). They were read for real practice: how orders, periods, payments and absences work today, and what producers find difficult in the current ordering process. Findings and derived requirements are in Table \ref{tab:complementary}. & See Table 1 for files and link \\ \hline
@@ -1330,7 +1328,7 @@ Total hours: 120 h (estimated), 40 h per analyst.
 \begin{itemize}
   \item \textbf{Team size and group split.} The team has three analysts, below the 4 or 5 students foreseen in the assignment [A], which limited the number of sessions that could be prepared and documented in parallel. The work started with a group of six students; it was later split into two groups of three. The interview notes IN-P and IN-C were taken before the split, when all six worked together, and are kept in the earlier group's archive, on branch Bendiks-changes of the repository (\url{docsoldgroup/notas-entrevistas}). They are used as supplementary evidence only.
   \item \textbf{Stakeholder availability.} Sessions had to be scheduled individually during classes, and the FAIR director was only available for the initial presentation [A].
-  \item \textbf{Unanswered questions.} Several questions failed or had no answer (``Who pays?'', the end-to-end process, the documents involved, question 8 of session 1, co-producer question 5 of session 2). They are listed in open-questions and turned into assumptions (section 2.5).
+  \item \textbf{Unanswered questions.} Several questions failed or had no answer (``Who pays?'', the end-to-end process, the documents involved, question 8 of session 1, co-producer question 5 of session 2). They were turned into assumptions (section 2.5).
   \item \textbf{Missing quantitative data.} No information on expected volume of users and data was obtained, so performance requirements are provisional.
   \item \textbf{Validation pending.} The SRS was not yet reviewed by stakeholders; requirements with source AN must be validated.
 \end{itemize}
