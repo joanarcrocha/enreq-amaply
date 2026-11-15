@@ -81,6 +81,8 @@ Outras partes referidas no enunciado que interagem com o sistema ou o projeto, m
 | Nome | Número | Papel |
 |---|---|---|
 | Joana Rita Rocha | 1211652 | Analista de negócio |
+| Bendik Halstensen | 1260122 | Analista de negócio |
+| Rodrigo Monteiro | 1260551 | Analista de negócio |
 
 ## Convenções
 
