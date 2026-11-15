@@ -1,0 +1,36 @@
+flowchart LR
+    subgraph PEOPLE["People using amaply"]
+        direction TB
+        P["Producers"]
+        C["Co-producers"]
+        M["AMAP management"]
+    end
+
+    APP["amaply"]
+
+    subgraph SERVICES["Candidate external services — none selected"]
+        direction TB
+        N["Notifications<br/>messages / status"]
+        L["Maps and locations<br/>location / matches"]
+        PAY["Payments<br/>requests / outcomes"]
+        INV["Invoicing<br/>transaction details / invoice"]
+        AUTH["Authentication<br/>sign-in / account identity"]
+        CHAT["Chat, if externally provided<br/>participants / messages"]
+    end
+
+    P <--> APP
+    C <--> APP
+    M <--> APP
+    APP <-.-> N
+    APP <-.-> L
+    APP <-.-> PAY
+    APP <-.-> INV
+    APP <-.-> AUTH
+    APP <-.-> CHAT
+
+    classDef person fill:#f8ecd6,stroke:#b88742,color:#202b33,stroke-width:1.5px;
+    classDef platform fill:#e7f1ed,stroke:#49806c,color:#202b33,stroke-width:2px;
+    classDef candidate fill:#f4f6f8,stroke:#7c8995,color:#202b33,stroke-width:1.5px,stroke-dasharray:5 4;
+    class P,C,M person;
+    class APP platform;
+    class N,L,PAY,INV,AUTH,CHAT candidate;

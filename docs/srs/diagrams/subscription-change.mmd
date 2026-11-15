@@ -1,0 +1,10 @@
+flowchart TD
+    A["Co-producer requests<br/>a pause or cancellation"] --> B["Record the request<br/>against the subscription"]
+    B --> C{"AMAP management<br/>approves?"}
+    C -->|"Approved"| D["Apply the approved<br/>pause or cancellation"]
+    C -->|"Not approved"| E["Keep the current<br/>subscription terms"]
+
+    classDef action fill:#f8ecd6,stroke:#b88742,color:#202b33,stroke-width:1.5px;
+    classDef decision fill:#e7f1ed,stroke:#49806c,color:#202b33,stroke-width:1.5px;
+    class A,B,D,E action;
+    class C decision;
