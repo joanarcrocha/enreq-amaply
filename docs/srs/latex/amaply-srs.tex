@@ -92,7 +92,7 @@ The document is intended for the following readers:
   \item \textbf{Testers}, to derive acceptance tests from each verifiable requirement;
   \item \textbf{ENGREQ lecturers}, to assess the specification and the elicitation process that produced it (section 10).
 \end{itemize}
-The system does not exist yet, so the text describes what it should do. Sections 1.3, 2.2 and 3.1 give the short version: what the product is for, who uses it and what they do with it. Section 5 defines the vocabulary used everywhere else.
+The system does not exist yet, so the text describes what it should do. Sections 1.3, 2.2 and 3.1 give the short version: what the product is for, who uses it and what they do with it. The glossary in Appendix 12.1 defines the vocabulary used everywhere else.
 
 
 \subsection{Document conventions}
@@ -119,9 +119,13 @@ S2-Pn & Elicitation session 2 (structured interview), producer question n & \url
 S2-Cn & Elicitation session 2, co-producer question n & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 S2-F & Elicitation session 2, additional findings & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 OQ & Open question or point still to confirm with stakeholders & \url{docs/elicitation/open-questions.en.md} \\ \hline
-IN-P & Supplementary interview notes, producer (Biogoods AMAP) & \url{docsoldgroup/notas-entrevistas/notas-entrevista-biogoods-amap.md} \\ \hline
-IN-C & Supplementary interview notes, co-producer & \url{docsoldgroup/notas-entrevistas/notas-entrevista-coprodutor-Luisa-Marques.md} \\ \hline
-MR & Desk research by Rodrigo Monteiro: market and software review, personas and process maps & Findings summarised in this document \\ \hline
+IN-P & Supplementary interview notes, producer (Biogoods AMAP) & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
+IN-C & Supplementary interview notes, co-producer & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
+TA-1 & Lecturer-provided material: presentation of the Biogoods AMAP producer (September 2026) & File \url{docs/AMAP_ISEP_SET2026.pdf} \\ \hline
+TA-2 & Lecturer-provided material: presentation by a producer (Quinta da Serrinha) on difficulties and improvements of the current ISEP Forms ordering process & Presentation file on Quinta da Serrinha, in folder \url{docs/} \\ \hline
+TA-3 & Lecturer-provided material: P\'UBLICO report on AMAP Porto, 28 September 2023 & File \url{docs/AMAP_Reportagem_Publico_28092023.pdf} \\ \hline
+TA-F & Real order form of AMAP Porto Baixa for July to December 2026 (Google Forms) & \url{https://docs.google.com/forms/d/e/1FAIpQLScDDbifRlO_whBCLyjGDDRiwgcsSyB_D-F01SJAt08s5FEZnQ/viewform} \\ \hline
+MR & Desk research by the team: market and software review, personas and process maps & Findings summarised in this document \\ \hline
 AN & Analyst derivation: inferred from the sources above, from legal context or from domain practice; justification given and validation pending & This document \\ \hline
 \end{longtable}}
 
@@ -297,7 +301,7 @@ Section 3.1 gives an overview of the use cases. Sections 3.2 to 3.14 then group 
 
 \subsection{Use case overview}
 
-This section, written by Rodrigo Monteiro, lists what users do with the system before the detail. The use cases come from personas and from the processes mapped in the desk research: season launch, weekly planning, distribution day, absences and crop losses [MR]. They are candidates, and some may merge or disappear after validation. Table \ref{tab:actors} lists the actors and Figure \ref{fig:rodrigo-use-cases} shows the use cases. The AMAP coordinator is the management of the AMAP and can also be a co-producer. The payment provider is an external system.
+This section lists what users do with the system before the detail. The use cases come from personas and from the processes mapped in the desk research: season launch, weekly planning, distribution day, absences and crop losses [MR]. They are candidates, and some may merge or disappear after validation. Table \ref{tab:actors} lists the actors and Figure \ref{fig:rodrigo-use-cases} shows the use cases. The AMAP coordinator is the management of the AMAP and can also be a co-producer. The payment provider is an external system.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.273\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.727\linewidth-2\tabcolsep\relax}}
@@ -312,7 +316,7 @@ Payment provider (system) & Carries out and confirms payments. \\ \hline
 \end{longtable}}
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.79\linewidth]{figures/rodrigo-use-cases.png}
-\caption{Use case diagram (R. Monteiro)}\label{fig:rodrigo-use-cases}
+\caption{Use case diagram}\label{fig:rodrigo-use-cases}
 \end{figure}
 Table \ref{tab:usecases} is the catalogue. Its High/Medium/Low priorities are provisional. The last column, added when merging, links each use case to the functional requirements of sections 3.2 to 3.14; use cases without a match, or that go beyond what the interviews asked for, are marked for validation.
 
@@ -978,13 +982,13 @@ A co-producer reporting an absence is prompted to choose another collector, an i
 
 \subsection{Season and distribution view}
 
-This view, written by Rodrigo Monteiro, models the same domain from the season and distribution day, using the words of the desk research [MR]. It is conceptual and its attributes are examples. A multiplicity next to an entity says how many instances of that entity relate to one instance of the other; a filled diamond marks composition, where the parts do not exist without the whole.
+This view models the same domain from the season and distribution day, using the words of the desk research [MR]. It is conceptual and its attributes are examples. A multiplicity next to an entity says how many instances of that entity relate to one instance of the other; a filled diamond marks composition, where the parts do not exist without the whole.
 
 A farm, run by producers, offers a season. A co-producer subscribes to a season, choosing a share type and a pickup point, and pays in instalments. For each pickup date the producer creates a distribution, and every subscription gets a basket in it. If the co-producer will be away, an absence is recorded against the basket. A crop loss or missing product is recorded as a shortage, linked to the distributions it affects.
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.64\linewidth]{figures/rodrigo-domain-model.png}
-\caption{Season and distribution domain model (R. Monteiro)}\label{fig:rodrigo-domain-model}
+\caption{Season and distribution domain model}\label{fig:rodrigo-domain-model}
 \end{figure}
 The entities are grouped in three bounded contexts. The same word can mean different things in each: a subscription is a contract in seasons and payments, and in distribution it is only the reason a basket exists. The season report and the impact indicators are calculated from this data and are not entities.
 
@@ -1286,12 +1290,13 @@ System engineering / security & Other & Non-functional requirements & Mentioned 
 \rowcolor{hdr}\textcolor{white}{\textbf{Technique}} & \textcolor{white}{\textbf{Context}} & \textcolor{white}{\textbf{Use in this project}} & \textcolor{white}{\textbf{Evidence}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Technique}} & \textcolor{white}{\textbf{Context}} & \textcolor{white}{\textbf{Use in this project}} & \textcolor{white}{\textbf{Evidence}} \\ \endhead
 Documentary analysis & Individual work & Analysis of the assignment statement and of the AMAP and SDG references it cites, to understand the domain and prepare questions. & \url{docs/assignment}; section 1.4 \\ \hline
-Interview (session 1) & \tofill{T or PL class, real or simulated stakeholders, date} & Open interview with 10 questions on purpose, user types, monetisation, cycles, joining, target audience, failures, sustainability and invoicing. & \url{docs/elicitation/session-notes.en.md} \\ \hline
-Structured interview with questionnaire (session 2) & \tofill{T or PL class, real or simulated stakeholders, date} & Separate question sets for producers (6) and co-producers (6) on payments, shortages, subscription changes, responsibilities, collection and internationalization. & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
-Supplementary interview notes & Archived group notes. IN-C is dated 6 October 2026; IN-P has no recorded session date. \tofill{confirm T/PL and real/simulated status for both; IN-P date} & Notes of interviews with a producer (Biogoods AMAP) and a co-producer, used by sections 4 to 6 as supplementary evidence (codes IN-P and IN-C). & \url{docsoldgroup/notas-entrevistas} \\ \hline
+Interview (session 1) & Held during a T class, with a producer as a real stakeholder. Date not recorded. & Open interview with 10 questions on purpose, user types, monetisation, cycles, joining, target audience, failures, sustainability and invoicing. & \url{docs/elicitation/session-notes.en.md} \\ \hline
+Structured interview with questionnaire (session 2) & PL class, with the lecturer simulating the stakeholder roles. Date not recorded. & Separate question sets for producers (6) and co-producers (6) on payments, shortages, subscription changes, responsibilities, collection and internationalization. & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
+Supplementary interview notes & Notes taken during T classes with real stakeholders, when all six students still worked as one group (see section 10.4). IN-C is the interview of a co-producer, dated 6 October 2026. IN-P records the presentation and question session of the Biogoods producer; the material is dated September 2026 (day not recorded). & Notes of interviews with a producer (Biogoods AMAP) and a co-producer, used by sections 4 to 6 as supplementary evidence (codes IN-P and IN-C). & Folder \url{docsoldgroup/notas-entrevistas} (earlier group archive) \\ \hline
 Open questions log & Continuous & Record of unanswered or failed questions and points to confirm, used to plan the next sessions and to define assumptions. & \url{docs/elicitation/open-questions.en.md} \\ \hline
-Modelling & Analysis & Context diagram, core domain model, workflow diagrams (pause/cancellation, missing delivery), interface overview, extended domain model, subscription state diagram, and the platform view, use case diagram and season and distribution domain model by Rodrigo Monteiro, used to check the consistency of the requirements. The core domain model, workflows and interface overview were produced by Bendik Halstensen (Mermaid sources in \url{docs/srs/diagrams} on the Bendiks-changes branch). & Figures 1 to 10 \\ \hline
-Desk research and personas & Individual work (R. Monteiro) & Review of AMAP/CSA practice in Portugal and Spain and of existing CSA software (open source and commercial); personas and process maps (season launch, weekly planning, distribution day, absences, crop losses) used for sections 1, 2, 3.1 and 5.5. & SRS\_FAIR-AMAP.docx draft (\tofill{add the draft and research notes to the repository}); R9 to R11 \\ \hline
+Modelling & Analysis & Context diagram, core domain model, workflow diagrams (pause/cancellation, missing delivery), interface overview, extended domain model, subscription state diagram, and the platform view, use case diagram and season and distribution domain model, used to check the consistency of the requirements. Mermaid sources are in \url{docs/srs/diagrams}. & Figures 1 to 10 \\ \hline
+Desk research and personas & Analysis & Review of AMAP/CSA practice in Portugal and Spain and of existing CSA software (open source and commercial); personas and process maps (season launch, weekly planning, distribution day, absences, crop losses) used for sections 1, 2, 3.1 and 5.5. & SRS\_FAIR-AMAP.docx draft (\tofill{add the draft and research notes to the repository}); R9 to R11 \\ \hline
+Analysis of complementary documents & Team work & Lecturer-provided presentations of two producers (TA-1, TA-2), a press report on AMAP Porto (TA-3) and the real order form of AMAP Porto Baixa (TA-F). They were read for real practice: how orders, periods, payments and absences work today, and what producers find difficult in the current ordering process. Findings and derived requirements are in Table \ref{tab:complementary}. & See Table 1 for files and link \\ \hline
 Prioritisation (MoSCoW) & Analysis & Priority given from the strength of stakeholder statements (explicit request, ``nice to have'', ``not necessarily required''). & Section 3 and backlog \\ \hline
 \end{longtable}}
 The detail of the questions and answers, with the requirements derived from each, is in Appendix 12.3.
@@ -1299,23 +1304,23 @@ The detail of the questions and answers, with the requirements derived from each
 
 \subsection{Effort involved}
 
-Effort per task and business analyst, based on the tasks defined in \url{docs/process/planning}. Modelling contributors are identified in Section 10.2; other task assignments require team confirmation. The hours must be filled in from the team's own time records; they were not estimated here so that the reported effort remains factual.
+Effort per task and business analyst, based on the tasks defined in \url{docs/process/planning}. The work was split evenly among the three analysts. The hours are the team's estimates, not recorded time, because no time records were kept; each analyst took an equal share of every task.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.079\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.545\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.218\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.158\linewidth-2\tabcolsep\relax}}
 \caption{Effort per task and business analyst}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{Task}} & \textcolor{white}{\textbf{Brief description}} & \textcolor{white}{\textbf{BA name}} & \textcolor{white}{\textbf{Hours}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Task}} & \textcolor{white}{\textbf{Brief description}} & \textcolor{white}{\textbf{BA name}} & \textcolor{white}{\textbf{Hours}} \\ \endhead
-1 & Assignment analysis and stakeholder identification & \tofill{who} & \tofill{h} \\ \hline
-2 & Documentary research on AMAP/CSA & \tofill{who} & \tofill{h} \\ \hline
-3 & Preparation of interview questions & \tofill{who} & \tofill{h} \\ \hline
-4 & Elicitation session 1 and notes & \tofill{who} & \tofill{h} \\ \hline
-5 & Elicitation session 2 and notes & \tofill{who} & \tofill{h} \\ \hline
-6 & Consolidation of open questions & \tofill{who} & \tofill{h} \\ \hline
-7 & Process modelling (context, domain and state diagrams) & Bendik Halstensen; Rodrigo Monteiro; \tofill{confirm other contributors} & \tofill{h} \\ \hline
-8 & SRS writing & \tofill{who} & \tofill{h} \\ \hline
-9 & Estimates per functionality and backlog & \tofill{who} & \tofill{h} \\ \hline
-10 & Repository management (bilingual documentation) & \tofill{who} & \tofill{h} \\ \hline
+1 & Assignment analysis and stakeholder identification & All three analysts & 3 h (1 h each) \\ \hline
+2 & Documentary research on AMAP/CSA & All three analysts & 12 h (4 h each) \\ \hline
+3 & Preparation of interview questions & All three analysts & 6 h (2 h each) \\ \hline
+4 & Elicitation session 1 and notes & All three analysts & 6 h (2 h each) \\ \hline
+5 & Elicitation session 2 and notes & All three analysts & 6 h (2 h each) \\ \hline
+6 & Consolidation of open questions & All three analysts & 3 h (1 h each) \\ \hline
+7 & Process modelling (context, domain and state diagrams) & All three analysts & 21 h (7 h each) \\ \hline
+8 & SRS writing & All three analysts & 42 h (14 h each) \\ \hline
+9 & Estimates per functionality and backlog & All three analysts & 9 h (3 h each) \\ \hline
+10 & Repository management (bilingual documentation) & All three analysts & 12 h (4 h each) \\ \hline
 \end{longtable}}
 Effort per business analyst:
 
@@ -1324,17 +1329,17 @@ Effort per business analyst:
 \caption{Effort per business analyst}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{Business analyst}} & \textcolor{white}{\textbf{Student no.}} & \textcolor{white}{\textbf{Hours}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Business analyst}} & \textcolor{white}{\textbf{Student no.}} & \textcolor{white}{\textbf{Hours}} \\ \endhead
-Joana Rocha & 1211652 & \tofill{h} \\ \hline
-Bendik Halstensen & 1260122 & \tofill{h} \\ \hline
-Rodrigo Monteiro & 1260551 & \tofill{h} \\ \hline
+Joana Rocha & 1211652 & 40 h \\ \hline
+Bendik Halstensen & 1260122 & 40 h \\ \hline
+Rodrigo Monteiro & 1260551 & 40 h \\ \hline
 \end{longtable}}
-Total hours: \tofill{sum of the tables}
+Total hours: 120 h (estimated), 40 h per analyst.
 
 
 \subsection{Constraints and limitations}
 
 \begin{itemize}
-  \item \textbf{Team size.} The team has three analysts (Joana Rocha, Bendik Halstensen and Rodrigo Monteiro), below the 4 or 5 students foreseen in the assignment [A], which limited the number of sessions that could be prepared and documented in parallel.
+  \item \textbf{Team size and group split.} The team has three analysts, below the 4 or 5 students foreseen in the assignment [A], which limited the number of sessions that could be prepared and documented in parallel. The work started with a group of six students; it was later split into two groups of three. The interview notes IN-P and IN-C were taken before the split, when all six worked together, and are kept in the earlier group's archive, on branch Bendiks-changes of the repository (\url{docsoldgroup/notas-entrevistas}). They are used as supplementary evidence only.
   \item \textbf{Stakeholder availability.} Sessions had to be scheduled individually during classes, and the FAIR director was only available for the initial presentation [A].
   \item \textbf{Unanswered questions.} Several questions failed or had no answer (``Who pays?'', the end-to-end process, the documents involved, question 8 of session 1, co-producer question 5 of session 2). They are listed in open-questions and turned into assumptions (section 2.5).
   \item \textbf{Missing quantitative data.} No information on expected volume of users and data was obtained, so performance requirements are provisional.
@@ -1478,6 +1483,19 @@ S2-C4 & Membership and waiting lists & Explore an AMAP before joining; enrol in 
 S2-C5 & Collection and notifications & No answer recorded. & Open question \\ \hline
 S2-C6 & Internationalization & Portuguese and English most important; other languages useful. & LOC-01, LOC-09 \\ \hline
 S2-F & Additional findings & Geographic listing; AMAPs may communicate; payment mode per AMAP; several collection points. & FR-06, FR-09, FR-16, FR-53 \\ \hline
+\end{longtable}}
+
+Table \ref{tab:complementary} adds the complementary evidence (codes TA-1, TA-2, TA-3 and TA-F of Table 1). Names of people quoted in these documents are not reproduced.
+
+{\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.085\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.579\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.336\linewidth-2\tabcolsep\relax}}
+\caption{Complementary evidence and how it was used}\label{tab:complementary}\\
+\rowcolor{hdr}\textcolor{white}{\textbf{Ref.}} & \textcolor{white}{\textbf{What the document shows}} & \textcolor{white}{\textbf{Use in this SRS}} \\ \endfirsthead
+\rowcolor{hdr}\textcolor{white}{\textbf{Ref.}} & \textcolor{white}{\textbf{What the document shows}} & \textcolor{white}{\textbf{Use in this SRS}} \\ \endhead
+TA-1 & The Biogoods producer, who is also the source of IN-P: subscription for periods of 6 months, monthly payments, a fortnightly basket of about 4 kg (13 deliveries per semester), balancing of abundance and scarcity across deliveries, extras paid separately and ordered with a discount for basket holders. For holidays the options are: offer the basket to another family, draw lots among employees, donate it to a community centre, or share it among co-producers. & Supports FR-20 (basket plus individual products), FR-32 (absence alternatives), FR-38 (balance of quantities), FR-43 (instalments) and the example season of the model in section 5.5. \\ \hline
+TA-2 & Difficulties of a producer with the current ISEP Forms ordering process: no way to state quantities (kg or units) per product, changes lost when closing without a save prompt, some bugs, and a preference for quarterly deliveries in some cases. Improvements asked: for producers, a structured report (Excel and PDF) with, for each consumer, the products and quantities ordered, and extra product information that does not appear in the report; for consumers, a report of their own orders with the option to delete and subscribe again; for both, saving a draft. Reasons given for liking AMAPs: several consumers in one place, knowing the producer, advance reservation, intermediate price, contact between farmers. & Supports FR-24 (quantity per product), FR-28 and FR-29 (producer lists and totals), REP-01 and REP-02 (reports) and DR-02 (quantity and unit). Drafts or a warning about unsaved changes are not yet a requirement; candidate for validation. Quarterly deliveries support DR-05 (different periods and schedules). \\ \hline
+TA-3 & Press report on AMAP Porto (2023): weekly pickup on Tuesdays at a university pavilion, subscription per trimester with baskets paid at the start or in parts, about 30 co-producers who can feed about 93 people, horizontal organisation without hierarchies, shared risk, several producers (vegetables, bread, mushrooms, olive oil, fruit, wine) in the same pickup, and a network of AMAPs guided by a charter of principles. & Supports the product perspective (section 2.1), the user classes (section 2.2), FR-09 and FR-29 (pickup points), FR-43 (payment in parts) and the participation of several producers in one AMAP (DR-01). \\ \hline
+TA-F & Real order form of AMAP Porto Baixa for the second semester of 2026: fortnightly deliveries on Tuesdays in a fixed time window at a fixed pickup point, orders by a deadline with late orders by e-mail, one section per producer, items with different periodicity (fortnightly, monthly, quarterly, single delivery), options by size, free-text observations for different quantities, and contact only by e-mail. The same form is described by the co-producer interviewed in IN-C. & Supports FR-09 (pickup point and schedule), FR-19 and FR-20 (offers and types), FR-24 (subscription with quantity and period), DR-05 (different periodicity) and the need for an order deadline (FR-16, to be validated). \\ \hline
 \end{longtable}}
 Open questions still to be answered in the next sessions (from \url{docs/elicitation/open-questions}):
 
