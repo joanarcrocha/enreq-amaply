@@ -94,7 +94,7 @@ The system does not exist yet, so the text describes what it should do. Sections
   \item Every requirement states its \textbf{source} and a \textbf{justification}, following the project rule that all information must be documented and justified. Source codes are listed in Table 1.
   \item \textbf{Requirement language.} ``Shall'' marks a mandatory requirement, ``should'' a desirable one and ``may'' an option.
   \item \textbf{Use cases} are UC01 to UC14 (section 3.1). Diagrams follow UML 2; the domain models are conceptual, so their attributes are examples and not a database design.
-  \item \textbf{Terms.} A co-producer is a member of an AMAP or CSA who pays for a season in advance and shares its risk. A share is what a co-producer commits to for the whole season. A basket is what the share yields on one distribution day. Other terms are in the glossary (Appendix 12.1).
+  \item \textbf{Terms.} A co-producer is a member of an AMAP or CSA who commits to supporting production over an agreed period and shares its risk; payment may be in instalments. A share is what a co-producer commits to for the whole season. A basket is what the share yields on one distribution day. Other terms are in the glossary (Appendix 12.1).
   \item Requirements derived by the analyst (source AN) and values that depend on open questions are marked ``to be validated'' and are listed in section 2.5.
 \end{itemize}
 {\footnotesize
@@ -108,13 +108,15 @@ S2-Pn & Elicitation session 2 (structured interview), producer question n & \url
 S2-Cn & Elicitation session 2, co-producer question n & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 S2-F & Elicitation session 2, additional findings & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
 OQ & Open question or point still to confirm with stakeholders & \url{docs/elicitation/open-questions.en.md} \\ \hline
-IN-P & Supplementary interview notes, producer (Biogoods AMAP) & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
-IN-C & Supplementary interview notes, co-producer & Notes from the earlier group of six students (see section 10.4), on branch Bendiks-changes of the repository, folder \url{docsoldgroup/notas-entrevistas} \\ \hline
+IN-P & Supplementary interview notes, producer (Biogoods AMAP), 29 September 2026 & \url{docsoldgroup/notas-entrevistas/notas-entrevista-biogoods-amap.md}; date and photographs in \url{docsoldgroup/notas-entrevistas/notas-jorge.md} \\ \hline
+IN-C & Supplementary interview notes, co-producer, 6 October 2026 & \url{docsoldgroup/notas-entrevistas/notas-entrevista-coprodutor-Luisa-Marques.md} \\ \hline
+IN-S & Presentation and questions with Sara Moreira, researcher and co-producer, 20 October 2026 & \url{docsoldgroup/notas-entrevistas/notas-entrevista-sara-moreira.md} \\ \hline
+DOC & Documentary analysis of the AMAP Porto guide, terms, order form and press report, 21 October 2026 & \url{docsoldgroup/Analise_Documental_AMAP.md}; original documents in \url{docsoldgroup/DOCUMENTOS_AMAP} \\ \hline
 TA-1 & Lecturer-provided material: presentation of the Biogoods AMAP producer (September 2026) & File \url{docs/AMAP_ISEP_SET2026.pdf} \\ \hline
-TA-2 & Lecturer-provided material: presentation by a producer (Quinta da Serrinha) on difficulties and improvements of the current ISEP Forms ordering process & Presentation file on Quinta da Serrinha, in folder \url{docs/} \\ \hline
+TA-2 & Lecturer-provided material: Quinta da Serrinha producer presentation on the current ISEP Forms ordering process & \url{docs/apresentacaoDanielMartins_QuintaDaSerrinha.pdf} \\ \hline
 TA-3 & Lecturer-provided material: P\'UBLICO report on AMAP Porto, 28 September 2023 & File \url{docs/AMAP_Reportagem_Publico_28092023.pdf} \\ \hline
 TA-F & Real order form of AMAP Porto Baixa for July to December 2026 (Google Forms) & \url{https://docs.google.com/forms/d/e/1FAIpQLScDDbifRlO_whBCLyjGDDRiwgcsSyB_D-F01SJAt08s5FEZnQ/viewform} \\ \hline
-MR & Desk research by the team: market and software review, personas and process maps & Findings summarised in this document \\ \hline
+MR & Desk research by the team: market and software review, personas and process maps & \url{docs/SRS_FAIR-AMAP.docx}; \url{docsoldgroup/analise-dinamica-mercado}; \url{docsoldgroup/analise-concorrencia} \\ \hline
 AN & Analyst derivation: inferred from the sources above, from legal context or from domain practice; justification given and validation pending & This document \\ \hline
 \end{longtable}}
 
@@ -130,7 +132,7 @@ amaply addresses two main needs expressed by the stakeholders [S1-Q1]: \textbf{c
   \item producer offers (seasonal baskets and individual products) and co-producer subscriptions [S1-Q2, S2-C2];
   \item delivery calendar, collection points, notifications and absence arrangements [S1-Q4, S2-P5];
   \item handling of shortages through replacement, refund or platform credit, and seasonal balance tracking [S2-P2, S1-Q7];
-  \item a single combined payment per co-producer, in instalments, with funds reaching producers before delivery [S2-P1, S2-C1];
+  \item a single combined payment per co-producer and currency for AMAPs using platform payments, in instalments, with funds reaching producers before delivery [S2-P1, S2-C1];
   \item invoicing adapted to the legal setup of each AMAP [S1-Q10];
   \item news, chat and notifications [S1-Q7, S2-C3];
   \item producer certificates and optional sustainability indicators [S1-Q9].
@@ -172,7 +174,7 @@ The product relates to SDG 2 (targets 2.3 and 2.4), SDG 11 (target 11.a) and SDG
   \item [R8] Regulation (EU) No 1169/2011 on the provision of food information to consumers.
   \item [R9] URGENCI (2016). Overview of Community Supported Agriculture in Europe. \url{https://urgenci.net/}
   \item [R10] PROVE, Promover e Vender (Portuguese network of short food chains). \url{https://www.prove.com.pt/}
-  \item [R11] Websites of the software reviewed in the desk research: AmapJ, Cagette.net, OpenOlitor, Open Food Network, Harvie, Barn2Door, Farmigo, LocalLine and others.
+  \item [R11] Websites of the software reviewed in the desk research: AmapJ, Cagette.net, OpenOlitor, Open Food Network, Harvie, Barn2Door, Farmigo, LocalLine and others. Source links and screenshots: \url{docsoldgroup/analise-concorrencia/analise_concorrencia.md} and its \url{images} subfolder.
 \end{itemize}
 
 \section{Overall description}
@@ -190,7 +192,7 @@ Figure 1 shows the system context. On the left are the user classes described in
 \end{figure}
 What amaply displaces is the set of informal tools described in section 1.3, which cost nothing and which everyone already knows how to use [MR]. Existing software falls into two groups [R11]. AmapJ, OpenOlitor and Open Food Network are open source or non-profit, and free or cheap. Farmigo, LocalLine, Harvie and Barn2Door are commercial, mostly North American, and charge a monthly fee or a share of sales. Few of them could be tried, so this comes from what each vendor says on its own site. None of those sites mentions Portuguese payment methods, the Portuguese language or Portuguese tax rules. PROVE [R10], the Portuguese network of short food chains, is context and not a software competitor.
 
-Users reach amaply through a web and mobile app (Figure \ref{fig:fig1_context}). Producers and AMAP coordinators need an offline mode, because farms and some collection points have no reliable coverage (OE-5). Payments, receipts and notifications go through external services, and the technology is left to design.
+Users reach amaply through a responsive web application (Figure \ref{fig:fig1_context}). Release 1.0 requires a connection; offline operation and later synchronisation are research proposals beyond this release (OE-5). Payments, receipts and notifications go through external services, and the technology is left to design.
 
 \subsection{User classes and characteristics}
 
@@ -219,8 +221,8 @@ The AMAP coordinator is not necessarily a separate person: one account can hold 
   \item \textbf{OE-2} The server side runs on a cloud infrastructure with data stored in data centres located in the European Union. Justification: the first users are Portuguese and GDPR [R6] restricts transfers of personal data outside the EU (AN).
   \item \textbf{OE-3} The system must coexist with the payment gateway, maps service, email service and certified invoicing software described in section 6.2.
   \item \textbf{OE-4} Users are initially located in Portugal; the solution must be ready for other countries since it is meant to be international [S1-Q6]. Spain is a likely second market [MR].
-  \item \textbf{OE-5} Producer and AMAP coordinator functions work offline and synchronise later, because farms and some pickup points have no reliable coverage [MR].
-  \item \textbf{OE-6} The platform sends notifications by e-mail, SMS and push, and exchanges data with payment providers, invoicing software and spreadsheets (CSV) [MR]. SMS and push go beyond the channels assumed for launch (AS-04) and are to be validated.
+  \item \textbf{OE-5} Release 1.0 requires connectivity. Offline producer/coordinator work and later synchronisation are proposals from the research draft [MR], pending stakeholder validation and outside the release 1.0 backlog and estimates.
+  \item \textbf{OE-6} Launch notifications use email and in-app messages (FR-54, AS-04). SMS and push are research candidates outside the launch commitment. Payment and invoicing exchanges follow section 6.2; CSV exchanges remain a research proposal [MR].
 \end{itemize}
 
 \subsection{Design and implementation constraints}
@@ -232,9 +234,9 @@ The AMAP coordinator is not necessarily a separate person: one account can hold 
   \item \textbf{CO-4 Configurability.} There are several types of AMAP with distinct rules [S1-Q2]; rules must be configuration, not code (see NFR-O-02).
   \item \textbf{CO-5 Low operating cost.} The platform must support small producers, possibly starting free or with a very small fee [S1-Q3]; technology choices must keep the cost per AMAP low.
   \item \textbf{CO-6 Languages.} Portuguese (European variant) and English at launch [S2-C6, MR].
-  \item \textbf{CO-7 Payment methods.} Payments support MB WAY, Multibanco references, SEPA direct debit and bank transfer; card data is handled only by the payment provider [MR, S2-C1].
+  \item \textbf{CO-7 Payment methods.} Release 1.0 requires MB Way and bank transfer (FR-44). PayPal and Apple Pay are Could options; Multibanco references and SEPA direct debit remain research candidates without a release commitment. Any card credentials are handled only by the payment provider [S2-C1; MR].
   \item \textbf{CO-8 Business model.} The business model cannot depend on a percentage of the value of baskets [MR, S1-Q3].
-  \item \textbf{CO-9 Devices and connectivity.} The system runs on mid-range smartphones over mobile data, and tolerates loss of connection in the field and at pickup points [MR].
+  \item \textbf{CO-9 Devices and connectivity.} The system runs on mid-range smartphones over mobile data. Release 1.0 shall identify an interrupted submission as unconfirmed, without reporting it as saved; offline editing and synchronisation are deferred under OE-5 [MR; AN].
 \end{itemize}
 
 \subsection{Assumptions and dependencies}
@@ -249,10 +251,10 @@ The following assumptions are not confirmed facts. If any of them is wrong, the 
 AS-01 & Next season's production is planned by the producer and agreed with the co-producers. & FR-21 & S1-Q2, OQ \\ \hline
 AS-02 & Waiting lists are ordered by request date unless the AMAP configures another rule (no priority rule was given). & FR-13 & S1-Q5, S2-P4, S2-C4 \\ \hline
 AS-03 & EUR is the only currency needed at launch (no currency was named; first users are in Portugal). & LOC-10 & S2-P6, S2-C6 \\ \hline
-AS-04 & Email and in-app notifications are sufficient channels at launch (no channel was specified). & FR-54 & S2-P5 \\ \hline
+AS-04 & Email and in-app messages are the launch notification channels (FR-54). Producer reminders use a one-day lead time (FR-31), an analyst choice based on the interview example; both choices require validation. & FR-31, FR-54 & S2-P5; AN \\ \hline
 AS-05 & First-year volume: up to 500 AMAPs, 50 000 registered users and 1 000 simultaneous users. Order of magnitude only, chosen because Portugal has a few dozen CSAs but the product is international. & NFR-P-02 & S1-Q6, OQ \\ \hline
 AS-06 & Renewal of subscriptions happens per season, by invitation before the season ends (no renewal procedure was given). & FR-27 & S2-P3, S2-C3 \\ \hline
-AS-07 & A payment provider offering MB Way, SEPA transfers and split payments to several beneficiaries is available in Portugal; support for recurring payments is still to be confirmed. & FR-40 to FR-44 & AN, MR \\ \hline
+AS-07 & A provider can support MB Way, bank transfer and combined payments with allocations to several beneficiaries, settling before delivery. Recurring-payment support and settlement timing remain to be confirmed. & FR-40 to FR-44 & S2-P1, S2-C1; AN, MR \\ \hline
 AS-08 & Each AMAP has at least one person willing to act as coordinator. & Features 3.4 and 3.5 & S1-Q7, S2-P4 \\ \hline
 AS-09 & Shortages caused by quality problems are handled with the same options as missing products (no procedure was described). & FR-36 & S2-P2 \\ \hline
 AS-10 & The core model is the season commitment; one-off purchases are not the aim. & Features 3.6, 3.7 & MR, S1-Q1 \\ \hline
@@ -260,7 +262,7 @@ AS-11 & Baskets are collected at fixed pickup points, on a fixed weekday and wit
 AS-12 & Most producers have a smartphone and will use it for data entry if the interface is simple. & NFR-U-01, NFR-U-03 & MR \\ \hline
 AS-13 & A cut-off for absences is configurable per AMAP. The interviews did not mention one, so it is a proposal to confirm with real groups. Refunds, credits and replacements after a crop loss follow the producer's choice (FR-36, S2-P2). & FR-16, FR-32, FR-36 & MR, S2-P2 \\ \hline
 AS-14 & Invoicing software that complies with Autoridade Tributária rules is reachable by export or API. & FR-49 & MR, CO-3 \\ \hline
-AS-15 & Access to real stakeholders is limited: the FAIR director attends only the initial presentation, so most sessions are with lecturers playing roles. & Section 10 & A, MR \\ \hline
+AS-15 & The FAIR director is available only for the initial presentation. Follow-up elicitation may use lecturer role-play; the inherited archive also contains real-stakeholder sessions (IN-P, IN-C, IN-S). & Section 10 & A, MR \\ \hline
 AS-16 & FAIR decides on pricing and on whether any part of the product will be open source. & FR-47 & MR \\ \hline
 \end{longtable}}
 
@@ -320,11 +322,11 @@ UC03 & Pay season share & Co-producer & Pay in full or by scheduled instalments.
 UC04 & View upcoming basket & Co-producer & See what the next basket holds. & Medium & FR-22 \\ \hline
 UC05 & Report absence & Co-producer & Tell the group before the cut-off that a basket will not be collected, and choose who receives it: a named person, an institution or other co-producers. & High & FR-32 \\ \hline
 UC06 & Set up pickup point & AMAP coordinator & Set the address, weekday and collection window of a pickup point. & High & FR-09, FR-15 \\ \hline
-UC07 & Check in basket pickup & AMAP coordinator & Mark baskets as collected or uncollected, also without a connection. & High & FR-33, FR-34, OE-5 \\ \hline
+UC07 & Check in basket pickup & AMAP coordinator & Optionally mark baskets as collected or uncollected while connected. Offline use is deferred (OE-5). & Low & FR-33, FR-34, OE-5 \\ \hline
 UC08 & View season report & Producer, AMAP coordinator & Kilos distributed, collection rate and payments over a season. & Medium & FR-38, REP-04 \\ \hline
-UC09 & Open season & Producer & Set the length, budget, share price and number of shares of a season, and its pickup points. & High & FR-17, FR-19 (S2-P4: calendar set by AMAP management) \\ \hline
+UC09 & Open season & Producer & Set the commitment period, share price and available quantity of a seasonal basket offer; collection dates follow the coordinator-defined AMAP calendar. & High & FR-17, FR-19 (S2-P4: calendar set by AMAP management) \\ \hline
 UC10 & Follow payments & Producer & See who has paid and what is overdue. & High & FR-46 \\ \hline
-UC11 & Plan weekly harvest and basket & Producer & Enter the week's harvest and basket content. The system produces the harvest list, net of co-producers who are away. & High & FR-21, FR-22, FR-28 \\ \hline
+UC11 & Plan weekly harvest and basket & Producer & Enter the week's harvest and basket content. The system produces a preparation list showing arrangements for absent co-producers; redirected baskets remain included. & High & FR-21, FR-22, FR-28 \\ \hline
 UC12 & Report shortage & Producer & Record a crop loss or missing product, notify the affected co-producers and choose replacement, refund or credit. & Medium & FR-35 to FR-37 \\ \hline
 UC13 & Manage groups and users & Platform administrator & Create groups, farms and accounts and handle data requests. & Medium & FR-56, NFR-S-01 \\ \hline
 UC14 & View impact indicators & Platform administrator & See aggregated indicators linked to the SDGs. & Low & FR-55 \\ \hline
@@ -577,7 +579,7 @@ Supports the delivery cycle: producers drop off produce at a collection point an
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement}} & \textcolor{white}{\textbf{Prio.}} & \textcolor{white}{\textbf{Source}} & \textcolor{white}{\textbf{Justification}} \\ \endhead
 FR-29 & For each delivery and collection point the system shall generate the list of members and items to collect. & Must & S1-Q4, AN & Produce is dropped at a specific location; a list per point is needed to prepare and hand over orders. \\ \hline
 FR-30 & The system shall notify co-producers of the place, date and time of each collection. & Must & S1-Q4 & Session 1: co-producers must be notified of the location. \\ \hline
-FR-31 & The system shall notify producers one day before each delivery, including the delivery list. & Must & S2-P5 & Producers should receive notifications, for example one day before delivery. \\ \hline
+FR-31 & The system shall notify producers one day before each delivery, including the delivery list. & Must & S2-P5; AN, AS-04 & One day before delivery was an interview example; it is the release 1.0 lead time chosen for validation, rather than a confirmed stakeholder deadline. \\ \hline
 FR-32 & A co-producer who cannot collect shall be able to declare it and choose an alternative: named person, another institution, or giving the products to other co-producers. & Must & S2-P5 & The producer described exactly these alternatives. \\ \hline
 FR-33 & If the AMAP enabled it, the system shall support an identity check at collection. & Could & S2-P5 & Not considered necessary by the producer, but the AMAP might decide otherwise. \\ \hline
 FR-34 & The system shall allow marking an order as uncollected, without any further handling. & Could & S2-P5 & The platform does not need to manage uncollected baskets; recording them only feeds the balance (FR-38). \\ \hline
@@ -635,7 +637,7 @@ Simplifies payments, one of the two main goals of the system [S1-Q1]. Co-produce
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.062\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.406\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.531\linewidth-2\tabcolsep\relax}}
 \rowcolor{hdr}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Stimulus (actor action)}} & \textcolor{white}{\textbf{System response}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Stimulus (actor action)}} & \textcolor{white}{\textbf{System response}} \\ \endhead
-1 & A payment instalment is due. & System groups all of the co-producer's due amounts across AMAPs into one payment request. \\ \hline
+1 & A payment instalment is due. & System groups due amounts from AMAPs using platform payments into one request per currency; externally paid amounts remain separate. \\ \hline
 2 & Co-producer pays with the chosen method. & Payment provider confirms; system allocates the amount to each AMAP or producer and deducts the platform fee. \\ \hline
 3 & Coordinator of an AMAP with external payments records a payment. & System updates the payment status of the member. \\ \hline
 \end{longtable}}
@@ -648,9 +650,9 @@ Simplifies payments, one of the two main goals of the system [S1-Q1]. Co-produce
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement}} & \textcolor{white}{\textbf{Prio.}} & \textcolor{white}{\textbf{Source}} & \textcolor{white}{\textbf{Justification}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement}} & \textcolor{white}{\textbf{Prio.}} & \textcolor{white}{\textbf{Source}} & \textcolor{white}{\textbf{Justification}} \\ \endhead
 FR-40 & If the AMAP chose payments through amaply, the co-producer shall pay through the platform. & Must & S2-P1, S2-F & Both modes are acceptable and each AMAP chooses. \\ \hline
-FR-41 & The system shall group all amounts due by a co-producer in a period, across all their AMAPs, into a single payment and distribute it to each AMAP or producer. & Must & S2-P1, S2-C1, S1-Q10 & One combined payment was requested by both sides, avoiding hundreds of individual payments. \\ \hline
-FR-42 & Funds shall be transferred to the AMAP or producer when the payment is confirmed and shall not be held until delivery. & Must & S2-P1, CO-2 & Producers need access to the money before delivery to finance production. \\ \hline
-FR-43 & The system shall support payment in instalments according to the AMAP's payment schedule (for example monthly), instead of the whole season up front. & Must & S2-C1 & The co-producer does not want to pay the entire season at once. \\ \hline
+FR-41 & The system shall group a co-producer\textquotesingle s amounts due in a period from AMAPs using platform payments into one payment per currency, with allocations to each AMAP or producer. Externally paid amounts shall remain separate. & Must & S2-P1, S2-C1, S1-Q10; AN & Combined payment is retained for release 1.0; the boundary preserves each AMAP\textquotesingle s payment choice. Provider feasibility remains an AS-07 dependency. \\ \hline
+FR-42 & After payment confirmation, funds shall be settled to the configured AMAP or producer before delivery, without amaply holding them until delivery. & Must & S2-P1, CO-2 & Producers need funds before delivery. The provider\textquotesingle s settlement timing must meet this requirement; instant settlement is not assumed. \\ \hline
+FR-43 & The system shall support payment in instalments according to the AMAP's payment schedule (for example monthly), without requiring payment for the whole season up front. & Must & S2-C1 & The co-producer does not want to pay the entire season at once. \\ \hline
 FR-44 & The system shall accept MB Way and bank transfer; it could also accept PayPal and Apple Pay. & Must (MB Way, transfer); Could (PayPal, Apple Pay) & S2-C1 & MB Way and transfers are current practice; PayPal and Apple Pay were mentioned as interesting; cash is not used. \\ \hline
 FR-45 & For AMAPs with external payments, coordinators and producers shall be able to record received payments manually. & Must & S2-F, S2-P1 & Keeps payment status up to date even when money does not go through amaply. \\ \hline
 FR-46 & Coordinators and producers shall see the payment status of each member, and the system shall remind members of overdue instalments. & Should & AN & Without visibility, the simplification goal [S1-Q1] would move work to manual follow-up. \\ \hline
@@ -814,7 +816,7 @@ Subscription & One co-producer's commitment to one offer, quantity and period. P
 Delivery & Records a distribution date set by AMAP management and its collection point. Delivery allocations link subscriptions to their expected and actual quantities. The AMAP may offer several collection points. & S1-Q4; S1-Q7; S2-P4, S2-F. The allocation record is proposed. \\ \hline
 Production evidence & A certificate, photograph or description associated with a producer's production practices. & S1-Q9. \\ \hline
 Communication & News, notices and chat, with sender, recipients and relevant AMAP or delivery. & S1-Q1, S1-Q4; S1-Q7; S2-C3. Message fields are proposed. \\ \hline
-Amounts by producer & Commitments and amounts separated by producer, with the AMAP's payment arrangement. Producers need funds before delivery; combined payment is preferred where feasible. & S2-P1, S2-C1. \\ \hline
+Amounts by producer & Commitments and amounts separated by producer, with the AMAP's payment arrangement. Producers need funds before delivery; FR-41 requires combined platform payments, with external amounts separate. & S2-P1, S2-C1. \\ \hline
 Subscription change request & Links a pause or cancellation request to its subscription and management decision. & S2-P3, S2-C3; proposed record structure. \\ \hline
 Missing-delivery resolution & Links the missing delivery or item to the producer's chosen response: replacement product, refund or platform credit. The record distinguishes the choice from its completion. & S2-P2. Recording the outcome separately is proposed. \\ \hline
 Platform credit & Credit value, currency, co-producer and related producer for a missing delivery. & S2-P2; proposed record structure. Use and settlement rules remain open. \\ \hline
@@ -835,7 +837,7 @@ DR-05 & The model shall allow different commitment periods and delivery schedule
 DR-06 & A pause or cancellation shall take effect only after AMAP management approves it. & S2-P3, S2-C3. The request and decision must be distinguishable; deadlines and financial effects remain open. \\ \hline
 DR-07 & A missing-delivery record shall identify the affected commitment and the producer's chosen response: replacement product, refund or platform credit. & S2-P2. An automatic refund for every seasonal variation is not established. \\ \hline
 DR-08 & Each AMAP's choice of payments through the platform or externally shall be recorded. Platform payment arrangements shall not make delivery a condition for producers to access funds. & S2-P1, S2-F. Funds are needed to finance production. \\ \hline
-DR-09 & If a combined payment is implemented, its record shall retain the breakdown by AMAP, producer and commitment. & Proposed from the combined-payment preference in S2-P1, S2-C1; supports reconciliation without merging commitments. \\ \hline
+DR-09 & Each combined payment shall retain its currency and breakdown by AMAP, producer and commitment. Externally paid amounts shall not be included in the platform payment. & Derived from FR-41 and S2-P1, S2-C1; supports reconciliation without merging commitments. \\ \hline
 DR-10 & An absence arrangement shall refer to the affected delivery and the co-producer's selected collection alternative. & S2-P5. Detailed contact fields and any permissions for the alternative collector remain open. \\ \hline
 \end{longtable}}
 A missing delivery can be resolved by replacement, refund or credit. Automatic refunds for seasonal variation, guaranteed weights and quality-complaint procedures are not established. [S2-P2, S2-C2]
@@ -867,7 +869,7 @@ Production evidence & Document, image or text & Certificate, photograph or descr
 Communication content & Text and message context & News, notices or chat content. Proposed supporting fields identify the sender, recipients and any related AMAP, subscription or delivery. & S1-Q1, S1-Q4; S1-Q7; S2-C3. \\ \hline
 Amount for a producer & Monetary amount and currency & Amount associated with the producer's offers; refunds and credit are recorded separately. & S2-P1 to S2-P2, S2-C1. Currency is proposed for international use. \\ \hline
 Collection record & Optional delivery-related record & Records collection if the AMAP adopts confirmation. Confirmation roles remain open. Pickup identity verification is not required by default, and managing baskets left uncollected is not required. & IN-P; IN-C; clarified scope in S2-P5. \\ \hline
-Payment arrangement & AMAP setting & Whether the AMAP accepts payment through amaply or externally. The full list of supported methods is still to be agreed. & S2-P1, S2-F. \\ \hline
+Payment arrangement & AMAP setting & Whether the AMAP accepts payment through amaply or externally. Launch methods follow FR-44 and CO-7; additional methods require a separate decision. & S2-P1, S2-F. \\ \hline
 Pause or cancellation request & Request and decision & Subscription, requested action, proposed effective date, decision and approving management member. & S2-P3, S2-C3; field structure is proposed. \\ \hline
 Resolution choice and progress & Choice and outcome & Replacement product, refund or platform credit for a missing delivery, with the affected allocation and the progress of the chosen response. Monetary responses include amount and currency. & S2-P2; tracking progress is proposed. \\ \hline
 Credit record & Monetary amount and currency & Credit awarded for a missing delivery and its associated producer and co-producer. Rules for using and settling credit remain open. & S2-P2; record fields are proposed. \\ \hline
@@ -888,7 +890,7 @@ The following reports may be views on screen. Permissions, historical changes, e
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Report and intended user}} & \textcolor{white}{\textbf{What it shows}} & \textcolor{white}{\textbf{Source and rationale}} \\ \endhead
 REP-01 & Subscription summary for a co-producer & Subscribed offers, producers and AMAPs, quantities and units, commitment periods, delivery dates and collection points. Show any pause or cancellation request separately from an approved change. & S1-Q2, S1-Q4, S1-Q5; S2-P3, S2-C3 to S2-C4. \\ \hline
 REP-02 & Delivery preparation summary for a producer & For a selected delivery, AMAP and collection point, the subscribed co-producers and products, baskets and quantities to prepare. Show advance absence arrangements where relevant. Totals use compatible products and units. & IN-P; S2-P5, S2-F. The consolidated view is proposed. \\ \hline
-REP-03 & Amount summary for a co-producer & Amounts by producer and AMAP, currency, billing basis, refunds and credit. A combined total is desired where payment arrangements and currencies allow. Paid and outstanding amounts depend on agreed reconciliation rules. & S2-P1 to S2-P2, S2-C1. Combined payment is a preference. \\ \hline
+REP-03 & Amount summary for a co-producer & Amounts by producer and AMAP, currency, billing basis, refunds and credit. Show the combined platform-payment total per currency (FR-41), with external amounts separately. Paid and outstanding amounts follow recorded payment outcomes. & S2-P1 to S2-P2, S2-C1; FR-41, FR-45. Detailed reconciliation rules remain open. \\ \hline
 REP-04 & Seasonal quantity summary for a producer and the relevant co-producer & Expected and actual delivery quantities over the selected commitment period, shown separately by subscription, type of produce and compatible unit. Quantities not yet recorded are marked as such. & S1-Q7. Supports review of abundance and scarcity; the balance calculation remains open. \\ \hline
 REP-05 & Missing-delivery follow-up for the producer and affected co-producer & The affected delivery or item, chosen replacement, refund or credit, and recorded progress. Do not present a chosen refund as completed before its outcome is recorded. & S2-P2. The report and progress distinction are proposed. \\ \hline
 \end{longtable}}
@@ -910,7 +912,7 @@ The diagram shows the core model. Approval requests, payment arrangements, resol
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.82\linewidth]{figures/domain-model.png}
-\caption{Core domain model. Sources and modelling choices are described in the relationship table below.}\label{fig:domain-model}
+\caption{Core domain model. Sources and modelling choices are described in Table 11.}\label{fig:domain-model}
 \end{figure}
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.176\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.412\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.412\linewidth-2\tabcolsep\relax}}
@@ -945,7 +947,7 @@ The commitment period says how long the agreement lasts; the schedule says when 
 
 Food preferences guide the producer without guaranteeing substitutions or allergy management. [S1-Q6; IN-C]
 
-Producers need funds before delivery. The co-producer prefers one payment across AMAPs, distributed by the AMAP, without paying the whole season at once. Combined payment and distribution remain preferences; recipient and invoicing arrangements are unresolved. [S2-P1, S2-C1]
+Producers need funds before delivery. FR-41 retains combined payment as a Must requirement for AMAPs using platform payments, grouped by currency; external payments remain separate. Instalments avoid requiring full-season prepayment. The receiving AMAP or producer and invoicing responsibility still require agreement, and provider feasibility is tracked in AS-07. [S2-P1, S2-C1; AN]
 
 A pause or cancellation changes the commitment only after AMAP management approval. A combined payment does not merge subscriptions. Other change rules remain open (Section 4.2). [S2-P3, S2-C3; modelling distinctions]
 
@@ -971,15 +973,15 @@ A co-producer reporting an absence is prompted to choose another collector, an i
 
 \subsection{Season and distribution view}
 
-This view models the same domain from the season and distribution day, using the words of the desk research [MR]. It is conceptual and its attributes are examples. A multiplicity next to an entity says how many instances of that entity relate to one instance of the other; a filled diamond marks composition, where the parts do not exist without the whole.
+This view specialises the core model for seasonal basket offers, using the words of the desk research [MR]. The core offer-based model remains authoritative for both seasonal baskets and individual products (FR-20, FR-24). It is conceptual and its attributes are examples. A multiplicity next to an entity says how many instances of that entity relate to one instance of the other; a filled diamond marks composition, where the parts do not exist without the whole.
 
-A farm, run by producers, offers a season. A co-producer subscribes to a season, choosing a share type and a pickup point, and pays in instalments. For each pickup date the producer creates a distribution, and every subscription gets a basket in it. If the co-producer will be away, an absence is recorded against the basket. A crop loss or missing product is recorded as a shortage, linked to the distributions it affects.
+A farm, run by producers, publishes a seasonal basket offer for a commitment period. Exactly one co-producer subscribes to that offer, choosing a share type and a pickup point, and pays in instalments. Each scheduled distribution follows the AMAP calendar set by its coordinator (FR-17); each participating subscription receives a basket allocation. If the co-producer will be away, an absence is recorded against the basket. A crop loss or missing product is recorded as a shortage, linked to the distributions it affects.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=0.64\linewidth]{figures/rodrigo-domain-model.png}
+\includegraphics[width=0.90\linewidth]{figures/rodrigo-domain-model.png}
 \caption{Season and distribution domain model}\label{fig:rodrigo-domain-model}
 \end{figure}
-The entities are grouped in three bounded contexts. The same word can mean different things in each: a subscription is a contract in seasons and payments, and in distribution it is only the reason a basket exists. The season report and the impact indicators are calculated from this data and are not entities.
+The entities are grouped into people and places, seasons and payments, and baskets and distribution. Subscription has the same identity in every group: one co-producer	extquotesingle s commitment to one offer; a basket is its allocation for one delivery. The season report and the impact indicators are calculated from this data and are not entities.
 
 
 \subsubsection{People and places}
@@ -1002,11 +1004,11 @@ PickupPoint & The place where one group of co-producers collects baskets, on a w
 \caption{Entities: seasons and payments}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{Entity}} & \textcolor{white}{\textbf{Description}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Entity}} & \textcolor{white}{\textbf{Description}} \\ \endhead
-Season & A period of production and distribution, for example 24 weeks, with a budget, a share price and a number of shares. Offered by one farm. \\ \hline
-Subscription & A co-producer's commitment to a season: one share (full or half), one pickup point, paid in full or by instalments. \\ \hline
+Season & In this specialised view, the seasonal basket offer and its commitment period, share price and available shares, published by a farm in an AMAP. The coordinator sets the delivery calendar (FR-17). \\ \hline
+Subscription & One co-producer\textquotesingle s commitment to one seasonal basket offer: a share quantity (for example full or half), one pickup point and a payment schedule. Individual-product subscriptions use the core model. \\ \hline
 Instalment & A scheduled amount with a due date. Records when and how it was paid. \\ \hline
 \end{longtable}}
-The instalments of a subscription add up to the price of the share. A season does not accept more subscriptions than shares available.
+Scheduled instalments sum to the agreed subscription price before subsequent approved adjustments. Committed share quantities, including half shares, shall not exceed the offer	extquotesingle s available shares. These are modelling rules derived from FR-19 and FR-24 [AN], requiring validation.
 
 
 \subsubsection{Baskets and distribution}
@@ -1026,11 +1028,11 @@ An absence has to be recorded before the cut-off of the distribution, and the co
 
 \subsubsection{Relation to the core model}
 
-The two views describe the same domain at different levels and must be reconciled during validation:
+The seasonal basket view is a specialisation of the core model, with the following mapping:
 
 \begin{itemize}
-  \item \textbf{Equivalent concepts.} PickupPoint corresponds to CollectionPoint, Distribution to Delivery, and Basket to DeliveryAllocation (what one subscription receives on one date). Producer and Co-producer correspond to Participant with a role in an AMAP participation.
-  \item \textbf{Different centre.} The core model is organised around the AMAP and its offers, as described in the interviews [S1-Q2, S2-F]; this view is organised around the farm and its season, with the share as the unit of commitment. A season with shares can be read as an offer of type seasonal basket (FR-20).
+  \item \textbf{Equivalent concepts.} PickupPoint corresponds to CollectionPoint, Distribution to Delivery, and Basket to DeliveryAllocation for a seasonal basket offer (what one subscription receives on one date). Producer and Co-producer correspond to Participant with a role in an AMAP participation.
+  \item \textbf{Different centre.} The core model is organised around the AMAP and its offers, as described in the interviews [S1-Q2, S2-F]; this view is organised around the farm and its season, with the share as the unit of commitment. The Season node represents an offer of type seasonal basket and its commitment period (FR-20); it does not replace the AMAP or individual-product offers. Each subscription remains linked to exactly one offer and co-producer.
   \item \textbf{Concepts only in this view.} Farm, Instalment, Absence and Shortage. Instalment, absence and shortage are covered by FR-43, FR-32 and FR-35 to FR-36.
   \item \textbf{Rule to confirm.} The cut-off for absences is not in the interview evidence; see AS-13.
 \end{itemize}
@@ -1056,8 +1058,8 @@ UI-02 & Offers and subscriptions, for a co-producer & Show the producer, basket 
 UI-03 & Personal subscription summary, for a co-producer & Show subscriptions across their AMAPs, producers, quantities, commitment periods, collection dates and locations. Distinguish a requested pause or cancellation from an approved change. & S2-P3, S2-C3 to S2-C4, S2-F; S1-Q2, S1-Q4. See REP-01. \\ \hline
 UI-04 & Offer and delivery preparation, for a producer & Allow the producer to describe offers and quantities, view commitments to their offers, and see what to prepare for a selected delivery and AMAP. & S1-Q2; IN-P. The preparation summary is proposed in REP-02. \\ \hline
 UI-05 & Producer presentation, for producers and people viewing their information & Allow a producer to add certificates, photographs or descriptions of production practices and make the agreed information available to its intended audience. & S1-Q9. File limits and visibility rules remain open. \\ \hline
-UI-06 & Delivery information and community news, for producers and co-producers & Show collection details, farm news, harvest changes and relevant notices. Provide producers with delivery reminders. & S1-Q1, S1-Q4; S1-Q7; S2-P5. One day before delivery is an example; exact timing and channels remain open. \\ \hline
-UI-07 & Amounts and payment options, for a co-producer & Show amounts by producer and AMAP, currency, payment route, refunds and credit. Support the AMAP's payment choice. Combined payment across AMAPs without full-season prepayment is a preference to investigate. & S2-P1 to S2-P2, S2-C1; REP-03. \\ \hline
+UI-06 & Delivery information and community news, for producers and co-producers & Show collection details, farm news, harvest changes and relevant notices. Provide producer reminders one day before delivery (FR-31), using email and in-app messages under FR-54. & S1-Q1, S1-Q4, S1-Q7; S2-P5; AN, AS-04. The timing and channels are explicit launch assumptions awaiting validation. \\ \hline
+UI-07 & Amounts and payment options, for a co-producer & Show amounts by producer and AMAP, currency, payment route, refunds and credit. Support the AMAP's payment choice. Show one payment per currency for AMAPs using platform payments (FR-41), with external amounts separately and instalments under FR-43. & S2-P1 to S2-P2, S2-C1; REP-03. \\ \hline
 UI-08 & Advance absence arrangements, for a co-producer & Prompt an absent person to choose another collector, an institution or other co-producers receiving the food. Collection confirmation is optional; managing uncollected baskets is not required. & S2-P5. Pickup verification is optional; deadlines and contact fields remain open. \\ \hline
 UI-09 & Calendar and subscription decisions, for AMAP management & Set the delivery calendar and approve or reject pause/cancellation requests. Distinguish submission from approval. & S2-P3 to S2-P4, S2-C3; approval display is proposed. \\ \hline
 UI-10 & Missing-delivery resolution, for a producer & Select replacement, refund or credit for the affected item or delivery. Show the co-producer the response and recorded progress. & S2-P2; progress display is proposed. \\ \hline
@@ -1091,16 +1093,16 @@ The following service interfaces are candidates for supporting the agreed workfl
 \caption{Candidate software interfaces}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{Candidate interface}} & \textcolor{white}{\textbf{Information sent and received if adopted}} & \textcolor{white}{\textbf{Purpose and open decisions}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Candidate interface}} & \textcolor{white}{\textbf{Information sent and received if adopted}} & \textcolor{white}{\textbf{Purpose and open decisions}} \\ \endhead
-Notification service & Send the recipient address for the selected channel, message content and delivery or community reference; receive acceptance or failure information. & Notify co-producers about collection and remind producers before delivery. One day before delivery is an example; timing and channels remain to be agreed. [S1-Q4; S2-P5] \\ \hline
+Notification service & Send the recipient address for the selected channel, message content and delivery or community reference; receive acceptance or failure information. & Notify co-producers about collection and remind producers before delivery. Use the one-day producer lead time in FR-31 and the email/in-app launch policy in FR-54; AS-04 records their validation status. [S1-Q4; S2-P5] \\ \hline
 Location or mapping service & Send the location entered or selected by the user; receive matching places, coordinates or distances as needed. & Support geographic AMAP discovery and several collection locations per AMAP. Provider and device-location access remain undecided. [S2-C4, S2-F] \\ \hline
-Payment service & Send a payment request with amount, currency, intended recipient and reference; receive its outcome. Exchanges for refunds, allocation or settlement must be defined if required by the selected payment arrangement. & Support AMAP-selected platform payments alongside external payments. Producers must be able to access funds before delivery. Combined payments are desired where feasible; recipient, fees, method list and reconciliation remain open. [S2-P1 to S2-P2, S2-C1] \\ \hline
+Payment service & Send a payment request with amount, currency, intended recipient and reference; receive its outcome. Exchanges for refunds, allocation or settlement must be defined if required by the selected payment arrangement. & Support AMAP-selected platform payments alongside external payments. Producers must be able to access funds before delivery. Implement combined payments per currency under FR-41 and the launch methods in FR-44. Provider feasibility (AS-07), recipients, fee values and detailed reconciliation remain open. [S2-P1 to S2-P2, S2-C1] \\ \hline
 Invoicing service & Exchange the seller, customer and transaction details required by an agreed invoicing process, and receive the invoice reference or document. & Support the certified invoicing integration specified in FR-49. No provider has been selected; the issuer depends on the AMAP legal setup and remains to be confirmed. [S1-Q10; OQ] \\ \hline
 External authentication service & Exchange the information needed to establish a user session and identify the account, according to the selected sign-in method. & Support sign-in if an external identity provider is chosen. The provider, protocol and account-linking rules remain open. [OQ] \\ \hline
 Optional chat service & If an external chat product is selected, exchange sender and recipient identifiers, message content and any agreed delivery information. & In-platform chat is requested, but using an external service is not a requirement. Permissions, retention, provider and protocol remain open. [S2-C3] \\ \hline
 \end{longtable}}
 Each selected integration needs a provider/version, message fields and format, authentication method and failure behaviour. The table gives preliminary exchanges.
 
-MB Way and bank transfer are current methods; cash is not normally used. Apple Pay and PayPal were suggestions. The supported method list remains open. [S2-C1]
+MB Way and bank transfer are current methods and the required release 1.0 methods (FR-44). PayPal and Apple Pay remain Could options; Multibanco references and SEPA direct debit are uncommitted research candidates (CO-7). Provider selection remains open. [S2-C1; MR; AN]
 
 
 \subsection{Hardware interfaces}
@@ -1114,21 +1116,21 @@ Pickup verification is optional; any required verification device would need a s
 
 \subsection{Communication interfaces}
 
-Communication channels and protocols remain to be selected. The following rules cover notifications, chat and service responses. [S1-Q1, S1-Q4; S1-Q7; S2-P5, S2-C3]
+Launch channels are email and in-app messages (FR-54); service providers and technical protocols remain to be selected. The following rules cover notifications, chat and service responses. [S1-Q1, S1-Q4; S1-Q7; S2-P5, S2-C3]
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.121\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.440\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.440\linewidth-2\tabcolsep\relax}}
 \caption{Communication rules}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement or proposed rule}} & \textcolor{white}{\textbf{Source or reasoning}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{ID}} & \textcolor{white}{\textbf{Requirement or proposed rule}} & \textcolor{white}{\textbf{Source or reasoning}} \\ \endhead
-COM-01 & Collection notifications shall identify the AMAP and collection location; date and time are proposed additions. Producers shall receive delivery reminders. & S1-Q4; S2-P5. One day before delivery is an example, not a fixed schedule. \\ \hline
+COM-01 & Collection notifications shall identify the AMAP, collection point, date and time (FR-30). Producers shall receive the delivery list one day before delivery (FR-31). Launch channels are email and in-app messages (FR-54). & S1-Q4; S2-P5; AN, AS-04. The one-day example and unspecified channels are recorded as launch assumptions requiring validation. \\ \hline
 COM-02 & Production news and explanations of harvest changes shall be available through the platform. The audience and any notification channel shall be agreed separately. & S1-Q7; audience and channel decisions remain open. \\ \hline
 COM-03 & For the proposed web interface, use HTTPS for communication between the user's browser and amaply. & Proposed technical safeguard for the personal and financial information described in Section 4. Protocol configuration belongs to the later security specification. \\ \hline
 COM-04 & If an external notification service is adopted, distinguish a message being accepted by that service from confirmed delivery to the recipient. A service failure shall not be shown as a successfully delivered notification. & Proposed rule to avoid giving users a misleading notification status. Delivery evidence depends on the selected service. \\ \hline
 COM-05 & If a payment service is adopted, associate each received result with the payment request it concerns. Repeated delivery of the same result shall not create a second payment record. & Proposed rule to keep the amount summary consistent when an external service repeats a message. \\ \hline
 COM-06 & Support in-platform chat and informal discussion with AMAP management. & Requested in S2-C3. Communication between separate AMAPs is unconfirmed. [S2-F] \\ \hline
 \end{longtable}}
-Remaining communication decisions: final reminder timing, channels, recipient rules, retries, message formats, chat access and retention, and response-time targets. Offline use and synchronisation are unconfirmed. Language rules are in Section 8. [S2-P5, S2-C3; analysis questions]
+Remaining communication decisions: recipient rules, retry policy, message formats, chat access and retention, and service response-time targets. The launch timing and channels are specified in FR-31 and FR-54, subject to AS-04 validation. Offline use and synchronisation are deferred beyond release 1.0 (OE-5). Language rules are in Section 8. [S2-P5, S2-C3; analysis questions]
 
 
 \section{Quality attributes}
@@ -1247,12 +1249,12 @@ The work followed the requirements elicitation methodology taught in the course,
 
 \begin{itemize}
   \item \textbf{1. Preparation.} Analysis of the assignment, identification of stakeholders and preparation of questions. Evidence: README, \url{docs/assignment}.
-  \item \textbf{2. Elicitation.} Sessions with stakeholders, complemented by documentary analysis. Each session was recorded in the repository (notes and session log).
-  \item \textbf{3. Analysis.} Unanswered and failed questions were consolidated in a list of open questions; answers were turned into requirements and assumptions.
+  \item \textbf{2. Elicitation.} Sessions with stakeholders, complemented by documentary analysis. Available notes are indexed in \url{docs/process/session-log.en.md}, including inherited real-stakeholder sessions; missing dates, durations and attendance are explicitly marked as not recorded.
+  \item \textbf{3. Analysis.} Unanswered questions and unresolved issues were consolidated in a list of open questions; answers were turned into requirements and assumptions.
   \item \textbf{4. Specification.} Writing of this SRS, with traceability of each requirement to its source (Table 1) and explicit justification.
   \item \textbf{5. Validation (planned).} Review of the SRS with stakeholders to close the open questions and assumptions of section 2.5.
 \end{itemize}
-All progress was recorded in the GitHub repository [R1], bilingual (English and Portuguese), as required by the assignment (planning, meetings, tasks and artefacts).
+The repository [R1] contains elicitation notes, documentary analysis, research and specification artefacts. The process indexes in \mbox{\url{docs/process/planning.en.md}} and \mbox{\url{docs/process/session-log.en.md}} were reconstructed on 15 November 2026 from these artefacts and Git history; they are not contemporaneous timesheets. The complete inherited archive is retained in \url{docsoldgroup} on main. Current process indexes are bilingual by team convention; inherited documents retain their original language. Individual attendance, actual hours and some session dates remain unrecorded.
 
 
 \subsection{Stakeholders}
@@ -1262,13 +1264,13 @@ All progress was recorded in the GitHub repository [R1], bilingual (English and 
 \caption{Stakeholders}\\
 \rowcolor{hdr}\textcolor{white}{\textbf{Stakeholder}} & \textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Interest / role}} & \textcolor{white}{\textbf{Involvement}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Stakeholder}} & \textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Interest / role}} & \textcolor{white}{\textbf{Involvement}} \\ \endhead
-Producers / farmers & Primary, user & Sell production in advance, receive money before delivery, simple management of deliveries & Sessions 1 and 2 \\ \hline
-Co-producers & Primary, user & Find AMAPs, subscribe, pay simply, collect produce, keep a close relation with producers & Sessions 1 and 2 \\ \hline
+Producers / farmers & Primary, user & Sell production in advance, receive money before delivery, simple management of deliveries & S2 producer-role answers; real interview IN-P \\ \hline
+Co-producers & Primary, user & Find AMAPs, subscribe, pay simply, collect produce, keep a close relation with producers & S2 co-producer-role answers; real sessions IN-C and IN-S \\ \hline
 AMAP coordinator / management & Secondary, user & Admit members, define calendar and rules, approve changes & Named as an important actor [S1-Q7]; represented through producer answers \\ \hline
 Director of FAIR Software Solutions & Sponsor & Business opportunity and monetisation & Available only for the initial presentation [A] \\ \hline
-Distributors & Other & Possible logistic partners & Mentioned in the assignment; not interviewed \\ \hline
-Volunteer coordination & Other & Volunteer work in AMAPs (for example at collection points) & Mentioned in the assignment; not interviewed \\ \hline
-System engineering / security & Other & Non-functional requirements & Mentioned in the assignment; addressed through analysis (sections 6 and 7) \\ \hline
+Distributors & Other & Possible logistic partners & Analyst-identified stakeholder; not interviewed \\ \hline
+Volunteer coordination & Other & Volunteer work in AMAPs (for example at collection points) & Analyst-identified stakeholder; not interviewed \\ \hline
+System engineering / security & Other & Non-functional requirements & Analyst-identified stakeholder; addressed through analysis (sections 6 and 7) \\ \hline
 \end{longtable}}
 
 \subsection{Applied techniques}
@@ -1279,13 +1281,13 @@ System engineering / security & Other & Non-functional requirements & Mentioned 
 \rowcolor{hdr}\textcolor{white}{\textbf{Technique}} & \textcolor{white}{\textbf{Context}} & \textcolor{white}{\textbf{Use in this project}} & \textcolor{white}{\textbf{Evidence}} \\ \endfirsthead
 \rowcolor{hdr}\textcolor{white}{\textbf{Technique}} & \textcolor{white}{\textbf{Context}} & \textcolor{white}{\textbf{Use in this project}} & \textcolor{white}{\textbf{Evidence}} \\ \endhead
 Documentary analysis & Individual work & Analysis of the assignment statement and of the AMAP and SDG references it cites, to understand the domain and prepare questions. & \url{docs/assignment}; section 1.4 \\ \hline
-Interview (session 1) & Held during a T class, with a producer as a real stakeholder. Date not recorded. & Open interview with 10 questions on purpose, user types, monetisation, cycles, joining, target audience, failures, sustainability and invoicing. & \url{docs/elicitation/session-notes.en.md} \\ \hline
+Interview (session 1) & Course elicitation; the date and respondent role are not established by the raw notes. Session identification remains to be confirmed. & Open interview with 10 questions on purpose, user types, monetisation, cycles, joining, target audience, failures, sustainability and invoicing. & \url{docs/elicitation/session-notes.en.md} \\ \hline
 Structured interview with questionnaire (session 2) & PL class, with the lecturer simulating the stakeholder roles. Date not recorded. & Separate question sets for producers (6) and co-producers (6) on payments, shortages, subscription changes, responsibilities, collection and internationalization. & \url{docs/elicitation/ENGREQ_Interview_Questions_and_Answers.md} \\ \hline
-Supplementary interview notes & Notes taken during T classes with real stakeholders, when all six students still worked as one group (see section 10.4). IN-C is the interview of a co-producer, dated 6 October 2026. IN-P records the presentation and question session of the Biogoods producer; the material is dated September 2026 (day not recorded). & Notes of interviews with a producer (Biogoods AMAP) and a co-producer, used by sections 4 to 6 as supplementary evidence (codes IN-P and IN-C). & Folder \url{docsoldgroup/notas-entrevistas} (earlier group archive) \\ \hline
+Supplementary interview notes & Notes taken during T classes with real stakeholders, when all six students still worked as one group (see section 10.4). IN-C is dated 6 October 2026. IN-P is dated 29 September 2026 in the handwritten-note transcription and linked photographs. & Notes and photographs of interviews with the Biogoods producer and a co-producer, used as supplementary evidence (IN-P, IN-C). The archive also records the 20 October presentation and questions with Sara Moreira (IN-S). & Folder \url{docsoldgroup/notas-entrevistas} (earlier group archive) \\ \hline
 Open questions log & Continuous & Record of unanswered or failed questions and points to confirm, used to plan the next sessions and to define assumptions. & \url{docs/elicitation/open-questions.en.md} \\ \hline
-Modelling & Analysis & Context diagram, core domain model, workflow diagrams (pause/cancellation, missing delivery), interface overview, extended domain model, subscription state diagram, and the platform view, use case diagram and season and distribution domain model, used to check the consistency of the requirements. Mermaid sources are in \url{docs/srs/diagrams}. & Figures 1 to 10 \\ \hline
-Desk research and personas & Analysis & Review of AMAP/CSA practice in Portugal and Spain and of existing CSA software (open source and commercial); personas and process maps (season launch, weekly planning, distribution day, absences, crop losses) used for sections 1, 2, 3.1 and 5.5. & \url{docs/SRS_FAIR-AMAP.docx} (research draft); R9 to R11 \\ \hline
-Analysis of complementary documents & Team work & Lecturer-provided presentations of two producers (TA-1, TA-2), a press report on AMAP Porto (TA-3) and the real order form of AMAP Porto Baixa (TA-F). They were read for real practice: how orders, periods, payments and absences work today, and what producers find difficult in the current ordering process. Findings and derived requirements are in Table \ref{tab:complementary}. & See Table 1 for files and link \\ \hline
+Modelling & Analysis & Context diagram, core domain model, workflow diagrams (pause/cancellation, missing delivery), interface overview, extended domain model, subscription state diagram, and the platform view, use case diagram and season and distribution domain model, used to check the consistency of the requirements. Available Mermaid and Graphviz sources are in \url{docs/srs/diagrams}; other inherited models are retained as images or in the research documents. & Figures 1 to 9 \\ \hline
+Desk research and personas & Analysis & Review of AMAP/CSA practice in Portugal and Spain and of existing CSA software (open source and commercial); personas and process maps (season launch, weekly planning, distribution day, absences, crop losses) used for sections 1, 2, 3.1 and 5.5. & \url{docs/SRS_FAIR-AMAP.docx}; \url{docsoldgroup/analise-dinamica-mercado}; \url{docsoldgroup/analise-concorrencia}; R9 to R11 \\ \hline
+Analysis of complementary documents & Team work & Lecturer-provided presentations of two producers (TA-1, TA-2), a press report on AMAP Porto (TA-3) and the real order form of AMAP Porto Baixa (TA-F). They were read for real practice: how orders, periods, payments and absences work today, and what producers find difficult in the current ordering process. The dated documentary analysis (DOC) also compares the AMAP Porto guide and terms with the order form and report. Findings and derived requirements are in Table \ref{tab:complementary}. & See Table 1 for files and link \\ \hline
 Prioritisation (MoSCoW) & Analysis & Priority given from the strength of stakeholder statements (explicit request, ``nice to have'', ``not necessarily required''). & Section 3 and backlog \\ \hline
 \end{longtable}}
 The detail of the questions and answers, with the requirements derived from each, is in Appendix 12.3.
@@ -1293,7 +1295,7 @@ The detail of the questions and answers, with the requirements derived from each
 
 \subsection{Effort involved}
 
-Effort per task and business analyst, based on the tasks defined in \url{docs/process/planning}. The work was split evenly among the three analysts. The hours are the team's estimates, not recorded time, because no time records were kept; each analyst took an equal share of every task.
+Effort per task and business analyst is indexed in \url{docs/process/planning.en.md}. The tables retain the team\textquotesingle s retrospective estimate of 120 hours, allocated equally among the three analysts for estimation. Actual time was not recorded; equal allocation is not evidence that each analyst performed the same work or attended every session. The planning record lists task artefacts, available Git dates and commit-author contributions; these support what was produced, not the individual hours.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.079\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.545\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.218\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.158\linewidth-2\tabcolsep\relax}}
@@ -1328,16 +1330,17 @@ Total hours: 120 h (estimated), 40 h per analyst.
 \subsection{Constraints and limitations}
 
 \begin{itemize}
-  \item \textbf{Team size and group split.} The team has three analysts, below the 4 or 5 students foreseen in the assignment [A], which limited the number of sessions that could be prepared and documented in parallel. The work started with a group of six students; it was later split into two groups of three. The interview notes IN-P and IN-C were taken before the split, when all six worked together, and are kept in the earlier group's archive, on branch Bendiks-changes of the repository (\url{docsoldgroup/notas-entrevistas}). They are used as supplementary evidence only.
+  \item \textbf{Team size and group split.} The team has three analysts, below the 4 or 5 students foreseen in the assignment [A], which limited the number of sessions that could be prepared and documented in parallel. The work started with a group of six students; it was later split into two groups of three. The interview notes IN-P and IN-C were taken before the split, when all six worked together, and are kept in the earlier group\textquotesingle s archive on main (\url{docsoldgroup/notas-entrevistas}). They are used as supplementary evidence only.
   \item \textbf{Stakeholder availability.} Sessions had to be scheduled individually during classes, and the FAIR director was only available for the initial presentation [A].
   \item \textbf{Unanswered questions.} Several questions failed or had no answer (``Who pays?'', the end-to-end process, the documents involved, question 8 of session 1, co-producer question 5 of session 2). They are listed in open-questions and turned into assumptions (section 2.5).
+  \item \textbf{Process-record limitations.} The evidence demonstrates interviews, research and modelling, but does not establish all attendance, session durations or actual effort per analyst. Reconstructed indexes retain these gaps explicitly; estimated hours are not presented as measured work.
   \item \textbf{Missing quantitative data.} No information on expected volume of users and data was obtained, so performance requirements are provisional.
   \item \textbf{Validation pending.} The SRS was not yet reviewed by stakeholders; requirements with source AN must be validated.
 \end{itemize}
 
 \section{Product Backlog}
 
-The backlog summarises the features as user stories. Each initial requirement (IR) may result in several user stories. Estimates cover all development stages (analysis, design, implementation, testing and deployment) and were obtained by relative sizing: S = 16 h, M = 32 h, L = 56 h, XL = 80 h. They are analyst estimates, made before any architecture decision, and should be reviewed by the development team.
+The backlog summarises the features as user stories. Each initial requirement (IR) may result in several user stories. Estimates cover all development stages (analysis, design, implementation, testing and deployment) and were obtained by relative sizing: S = 16 h, M = 32 h, L = 56 h, XL = 80 h. They are analyst estimates, made before any architecture decision, and should be reviewed by the development team. Offline operation and synchronisation (OE-5) are excluded; the connected submission-failure feedback in CO-9 is included in the affected user-story estimates.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.103\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.158\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.503\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.133\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.103\linewidth-2\tabcolsep\relax}}
@@ -1367,7 +1370,7 @@ US-20 & FR-32, FR-34 & As a co-producer, I want to choose an alternative when I 
 US-21 & FR-33 & As a coordinator, I want to enable an identity check at collection, so that orders go to the right person. & 16 h (S) & 3 \\ \hline
 US-22 & FR-35, FR-36, FR-37 & As a producer, I want to record a shortage and choose replacement, refund or credit, so that members are compensated fairly. & 56 h (L) & 1 \\ \hline
 US-23 & FR-38, FR-39 & As a co-producer, I want to see my seasonal balance and use my credits, so that I know the season is fair. & 32 h (M) & 2 \\ \hline
-US-24 & FR-40, FR-41, FR-42, FR-43 & As a co-producer, I want one combined payment in instalments for all my AMAPs, with money reaching producers immediately, so that paying is simple. & 80 h (XL) & 1 \\ \hline
+US-24 & FR-40, FR-41, FR-42, FR-43 & As a co-producer, I want one combined payment per currency in instalments for AMAPs using platform payments, with funds reaching producers before delivery, so that paying is simple. & 80 h (XL) & 1 \\ \hline
 US-25 & FR-44 & As a co-producer, I want to pay with MB Way or transfer (and PayPal or Apple Pay later), so that I use my usual method. & 56 h (L) & 1 \\ \hline
 US-26 & FR-45, FR-46 & As a coordinator, I want to record external payments and see payment status, so that I follow up overdue members. & 32 h (M) & 1 \\ \hline
 US-27 & FR-47, FR-56 & As an administrator, I want to manage fee plans and users, so that the platform is sustainable. & 32 h (M) & 1 \\ \hline
@@ -1433,7 +1436,7 @@ Figure \ref{fig:fig2_domain} extends the core domain model of section 5.1 with t
 \includegraphics[width=1.00\linewidth]{figures/fig2_domain.png}
 \caption{Extended domain model (all features)}\label{fig:fig2_domain}
 \end{figure}
-Figure \ref{fig:fig3_subscription_states} shows the life cycle of a subscription. It makes explicit the rule from S2-P3 that pauses and cancellations depend on coordinator approval: the member only moves the subscription to ``Pause/cancel requested'', and only the coordinator can move it to Paused or Cancelled. Renewal starts a new subscription for the next season (FR-27).
+Figure \ref{fig:fig3_subscription_states} shows the life cycle of a subscription. Membership admission is separate (FR-11); a valid subscription is recorded under FR-24 without a second coordinator admission decision. Only pause/cancellation requests require coordinator approval (S2-P3, FR-26). A pending request does not itself change the current commitment. The agreed commitment end applies while active, paused or awaiting a decision. The dashed renewal link creates a new subscription (FR-27), rather than reopening the ended record. State handling is an analyst model; effective dates and financial effects still require validation.
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.97\linewidth]{figures/fig3_subscription_states.png}
@@ -1474,7 +1477,7 @@ S2-C6 & Internationalization & Portuguese and English most important; other lang
 S2-F & Additional findings & Geographic listing; AMAPs may communicate; payment mode per AMAP; several collection points. & FR-06, FR-09, FR-16, FR-53 \\ \hline
 \end{longtable}}
 
-Table \ref{tab:complementary} adds the complementary evidence (codes TA-1, TA-2, TA-3 and TA-F of Table 1). Names of people quoted in these documents are not reproduced.
+Table \ref{tab:complementary} adds the complementary evidence (codes TA-1, TA-2, TA-3, TA-F, IN-S and DOC of Table 1). Names of people quoted in these documents are not reproduced.
 
 {\footnotesize
 \begin{longtable}{>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.085\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.579\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash\hspace{0pt}}p{\dimexpr 0.336\linewidth-2\tabcolsep\relax}}
@@ -1484,9 +1487,11 @@ Table \ref{tab:complementary} adds the complementary evidence (codes TA-1, TA-2,
 TA-1 & The Biogoods producer, who is also the source of IN-P: subscription for periods of 6 months, monthly payments, a fortnightly basket of about 4 kg (13 deliveries per semester), balancing of abundance and scarcity across deliveries, extras paid separately and ordered with a discount for basket holders. For holidays the options are: offer the basket to another family, draw lots among employees, donate it to a community centre, or share it among co-producers. & Supports FR-20 (basket plus individual products), FR-32 (absence alternatives), FR-38 (balance of quantities), FR-43 (instalments) and the example season of the model in section 5.5. \\ \hline
 TA-2 & Difficulties of a producer with the current ISEP Forms ordering process: no way to state quantities (kg or units) per product, changes lost when closing without a save prompt, some bugs, and a preference for quarterly deliveries in some cases. Improvements asked: for producers, a structured report (Excel and PDF) with, for each consumer, the products and quantities ordered, and extra product information that does not appear in the report; for consumers, a report of their own orders with the option to delete and subscribe again; for both, saving a draft. Reasons given for liking AMAPs: several consumers in one place, knowing the producer, advance reservation, intermediate price, contact between farmers. & Supports FR-24 (quantity per product), FR-28 and FR-29 (producer lists and totals), REP-01 and REP-02 (reports) and DR-02 (quantity and unit). Drafts or a warning about unsaved changes are not yet a requirement; candidate for validation. Quarterly deliveries support DR-05 (different periods and schedules). \\ \hline
 TA-3 & Press report on AMAP Porto (2023): weekly pickup on Tuesdays at a university pavilion, subscription per trimester with baskets paid at the start or in parts, about 30 co-producers who can feed about 93 people, horizontal organisation without hierarchies, shared risk, several producers (vegetables, bread, mushrooms, olive oil, fruit, wine) in the same pickup, and a network of AMAPs guided by a charter of principles. & Supports the product perspective (section 2.1), the user classes (section 2.2), FR-09 and FR-29 (pickup points), FR-43 (payment in parts) and the participation of several producers in one AMAP (DR-01). \\ \hline
-TA-F & Real order form of AMAP Porto Baixa for the second semester of 2026: fortnightly deliveries on Tuesdays in a fixed time window at a fixed pickup point, orders by a deadline with late orders by e-mail, one section per producer, items with different periodicity (fortnightly, monthly, quarterly, single delivery), options by size, free-text observations for different quantities, and contact only by e-mail. The same form is described by the co-producer interviewed in IN-C. & Supports FR-09 (pickup point and schedule), FR-19 and FR-20 (offers and types), FR-24 (subscription with quantity and period), DR-05 (different periodicity) and the need for an order deadline (FR-16, to be validated). \\ \hline
+TA-F & Real order form of AMAP Porto Baixa for the second semester of 2026: fortnightly deliveries on Tuesdays in a fixed time window at a fixed pickup point, orders by a deadline with late orders by e-mail, one section per producer, items with different periodicity (fortnightly, monthly, quarterly, single delivery), options by size, free-text observations for different quantities, and contact only by e-mail. The same form is described by the co-producer interviewed in IN-C. & Supports FR-09 (pickup point and schedule), FR-19 and FR-20 (offers and types), FR-24 (subscription with quantity and period), DR-05 (different periodicity) and a candidate order-submission deadline, which is not yet specified by FR-16 and remains to be validated. \\ \hline
+IN-S & Presentation and questions on 20 October: long-term commitment, shared risk, manual amount calculation, lack of cycle summaries, and a preference for monthly rather than full-cycle payment. & Supports FR-20 and FR-24 (commitments), REP-01 and REP-03 (summaries), and FR-43 (instalments). No new compulsory workflow is inferred from this source. \\ \hline
+DOC & Documentary comparison dated 21 October: the AMAP Porto guide, UPTEC Baixa terms, current order form and press report, with source-specific findings and open questions. & Supports FR-11 (admission), FR-19 and FR-24 (offers and commitments), FR-43 (payment schedules), DR-05 (different periods), and the remaining questions in section 4.2. The source documents and analysis remain in the inherited archive. \\ \hline
 \end{longtable}}
-Open questions still to be answered in the next sessions (from \url{docs/elicitation/open-questions}):
+Open questions still to be answered in the next sessions (from \url{docs/elicitation/open-questions.en.md}):
 
 \begin{itemize}
   \item What are the problems of current AMAP/CSA software that amaply should solve?

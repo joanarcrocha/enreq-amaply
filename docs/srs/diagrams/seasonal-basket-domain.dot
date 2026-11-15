@@ -1,0 +1,29 @@
+// Specialisation of the offer-based core model for seasonal baskets (SRS 5.5).
+digraph SeasonalBasketDomain {
+  graph [rankdir=TB, bgcolor="white", nodesep=0.55, ranksep=0.7, pad=0.15];
+  node [shape=record, style=filled, fillcolor="#ffffe5", color="#666655", fontname="Arial", fontsize=11];
+  edge [dir=none, color="#555555", fontname="Arial", fontsize=9, labeldistance=1.8];
+  Farm [label="{Farm|name\llocation\lpractices\l}"];
+  Producer [label="{Producer|name\lemail\l}"];
+  Season [label="{Season (seasonal basket offer)|startDate\lendDate\lsharePrice\lsharesAvailable\l}"];
+  Distribution [label="{Distribution|date\lcutOff (proposed)\lbasketContent\l}"];
+  Subscription [label="{Subscription|shareQuantity\lpaymentMode\lstatus\l}"];
+  CoProducer [label="{Co-producer|name\lemail\lphone\l}"];
+  PickupPoint [label="{PickupPoint|address\lweekday\ltimeWindow\l}"];
+  Instalment [label="{Instalment|dueDate\lamount\lpaidOn\lmethod\l}"];
+  Basket [label="{Basket (delivery allocation)|status\l}"];
+  Absence [label="{Absence|reportedOn\larrangement\l}"];
+  Shortage [label="{Shortage|description\lresolution\l}"];
+  Season -> Farm [label="offered by", taillabel="0..*", headlabel="1"];
+  Farm -> Producer [label="run by", taillabel="1", headlabel="1..*"];
+  Season -> Subscription [label="committed through", taillabel="1", headlabel="0..*"];
+  Season -> Distribution [label="under AMAP calendar", taillabel="1", headlabel="0..*"];
+  Distribution -> Basket [label="contains", taillabel="1", headlabel="0..*"];
+  Basket -> Subscription [label="for", taillabel="0..*", headlabel="1"];
+  Subscription -> CoProducer [label="made by", taillabel="0..*", headlabel="1"];
+  Subscription -> Instalment [label="payment plan", taillabel="1", headlabel="1..*"];
+  Subscription -> PickupPoint [label="collected at", taillabel="0..*", headlabel="1"];
+  Distribution -> PickupPoint [label="held at", taillabel="0..*", headlabel="1"];
+  Absence -> Basket [label="redirects collection", taillabel="0..1", headlabel="1"];
+  Shortage -> Distribution [label="affects", taillabel="0..*", headlabel="1..*"];
+}

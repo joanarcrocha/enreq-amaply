@@ -1,0 +1,23 @@
+// Membership admission is FR-11; subscription recording is FR-24.
+// Coordinator approval applies to pause/cancellation only (FR-26).
+digraph SubscriptionStates {
+  graph [rankdir=TB, bgcolor="white", nodesep=0.45, ranksep=0.65, pad=0.2];
+  node [shape=box, style="rounded,filled", fillcolor="#e1ecf7", color="#376795", penwidth=1.4, fontname="Arial", fontsize=12, fontcolor="#244f79", margin="0.20,0.13"];
+  edge [fontname="Arial", fontsize=10, color="#555555", arrowsize=0.7];
+  Requested [label="Subscription entry"];
+  Active [label="Active"];
+  Pending [label="Pause/cancel requested\n(current terms remain)"];
+  Paused [label="Paused"];
+  Cancelled [label="Cancelled"];
+  Ended [label="Ended"];
+  Requested -> Active [label="save valid subscription\n+ payment plan (FR-24)"];
+  Active -> Pending [label="member requests"];
+  Pending -> Active [label="coordinator rejects"];
+  Pending -> Paused [label="approve pause\n(coordinator)"];
+  Pending -> Cancelled [label="approve cancel\n(coordinator)"];
+  Paused -> Active [label="approved pause ends"];
+  Active -> Ended [label="commitment period ends"];
+  Paused -> Ended [label="commitment period ends"];
+  Pending -> Ended [label="commitment period ends"];
+  Ended -> Requested [style=dashed, constraint=false, label="renewal: NEW record\n(FR-27)"];
+}
